@@ -9,11 +9,6 @@ html {
 
 body {
     font-size: 1.4rem;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 h1 {
@@ -24,7 +19,7 @@ h1 {
 
 button {
     border: none;
-    border-radius: 10px;
+    padding: $s-size $l-size;
     font-weight: 600;
     font-size: $m-size;
     letter-spacing: 2px;
@@ -39,4 +34,8 @@ button {
 button:disabled {
     background: $btn-disabled;
     transition: .3 ease-in-out;
+}
+
+.border {
+    border: 2px solid black;
 }

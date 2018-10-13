@@ -1,0 +1,25 @@
+.h-l-grid {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.h-c__title {flex: 1;}
+
+.h-l-inputs__container {
+    @extend .h-l-grid;
+    width: 100%;
+    flex: 1;
+    align-items: center;
+}
+
+.h-l__titles {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.h-l-grid--column {
+    flex-direction: column;
+    margin-bottom: $xxl-size;
+    @extend .h-l-grid
+}

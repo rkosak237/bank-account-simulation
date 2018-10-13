@@ -6,7 +6,68 @@ header {
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    height: 50px;
-    padding: $s-size;
-    justify-content: space-between;
+    height: $xxl-size;
+    width: 100%;
+    justify-content: center;
+}
+
+.header__container {
+    height: 100%;
+    width: 90%;
+}
+
+.header__wrapper {
+    display: flex;
+    height: inherit;
+}
+
+.header__account {
+    display: flex;
+    flex: 1;
+}
+
+.company__logo {
+    height: $xxl-size;
+    width: $xxl-size;
+    color: white;
+    background: grey;
+}
+
+.account__profile-img {
+    height: $xxl-size;
+    width: $xxl-size;
+    background: grey;
+    color: white;
+}
+.account__user {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    padding: 0 $s-size;
+}
+
+.account__settings {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+    align-items: center;
+}
+
+.menu__element {
+    text-decoration: none;
+    font-size: $m-size;
+    color: $font-color;
+    font-weight: bold;
+}
+
+.header__logout {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
 }
