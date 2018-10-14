@@ -4,7 +4,9 @@
     justify-content: space-between;
 }
 
-.h-c__title {flex: 1;}
+.h-c__title {
+    flex: 1;
+}
 
 .h-l-inputs__container {
     @extend .h-l-grid;
@@ -18,8 +20,26 @@
     justify-content: space-between;
     width: 100%;
 }
+
 .h-l-grid--column {
     flex-direction: column;
     margin-bottom: $xxl-size;
     @extend .h-l-grid
+}
+
+.h-l__label {
+    margin-right: $s-size;
+}
+
+.h-l_search,
+.h-l__select {
+    border-radius: 10px;
+    box-shadow: none;
+    border: 1px solid black;
+    padding: $s-size * 0.5;
+    width: 70%;
+}
+
+.inputs__element {
+    width: 50%;
 }

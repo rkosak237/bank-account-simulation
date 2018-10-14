@@ -7,11 +7,11 @@ const History = () => {
             <div className="h-l-grid">
                 <h1 className="h-c__title">History</h1>
                 <div className="h-l-inputs__container">
-                    <div>
+                    <div className="inputs__element">
                         <label className="h-l__label" htmlFor="">Search</label>
                         <input className="h-l_search" type="text"/>
                     </div>
-                    <div>
+                    <div className="inputs__element">
                         <label className="h-l__label" htmlFor="">Filter by</label>
                         <select className="h-l__select" name="" id="">
                             <option value="">a</option>
