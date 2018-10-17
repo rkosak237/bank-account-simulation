@@ -2,11 +2,11 @@ import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Header = () => (
-    <header>
+    <header className="header">
         <div className="header__desktop-nav header__container">
             <div className="header__wrapper">
                 <div className="header__account">
-                    <div className="company__logo">
+                    <div className="header__logo">
                         <p>Logo</p>
                     </div>
                     <div className="account__profile-img">
@@ -20,12 +20,24 @@ const Header = () => (
                         </div>
                     </div>
                 </div>
-                <nav className="menu">
-                    <a className="menu__element"href="#">Home</a>
-                    <a className="menu__element"href="#">Analyse</a>
-                    <a className="menu__element"href="#">Plan</a>
-                    <a className="menu__element"href="#">Earn</a>
-                    <a className="menu__element"href="#">Search</a>
+                <nav className="nav">
+                    <ul className="nav-list">
+                        <li className="nav-list__item">
+                            <a className="nav__text" href="#">Home</a>
+                        </li>
+                        <li className="nav-list__item">
+                            <a className="nav__text" href="#">Analyse</a>
+                        </li>
+                        <li className="nav-list__item">
+                            <a className="nav__text" href="#">Plan</a>
+                        </li>
+                        <li className="nav-list__item">
+                            <a className="nav__text" href="#">Earn</a>
+                        </li>
+                        <li className="nav-list__item">
+                            <a className="nav__text" href="#">Search</a>
+                        </li>
+                    </ul>
                 </nav>
                 <div className="header__logout">
                     <p>Logout</p>

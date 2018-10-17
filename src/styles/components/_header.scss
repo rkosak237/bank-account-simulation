@@ -1,4 +1,4 @@
-header {
+.header {
     background: $background-color;
     -webkit-box-shadow: 2px 1px 25px -6px rgba(0, 0, 0, 0.65);
     -moz-box-shadow: 2px 1px 25px -6px rgba(0, 0, 0, 0.65);
@@ -26,7 +26,7 @@ header {
     flex: 1;
 }
 
-.company__logo {
+.header__logo {
     height: $xxl-size;
     width: $xxl-size;
     color: white;
@@ -52,18 +52,38 @@ header {
 }
 
 
-.menu {
-    display: flex;
-    justify-content: space-around;
-    flex: 1;
+.nav {
     align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
 }
 
-.menu__element {
+.nav-list {
+    list-style: none;
+    display: flex;
+    height: 100%;
+}
+
+.nav-list__item {
+    width: $xxl-size;
+    text-align: center;
+}
+
+.nav__text {
     text-decoration: none;
     font-size: $m-size;
     color: $font-color;
     font-weight: bold;
+    transition: .2s ease-in-out;
+    display: block;
+    box-sizing: border-box;
+    padding-top: 42px;
+    height: 100%;
+
+    &:hover {
+        background: lighten($blue-accent, 40%);
+    }
 }
 
 .header__logout {

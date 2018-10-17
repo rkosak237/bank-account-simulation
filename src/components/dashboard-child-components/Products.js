@@ -1,35 +1,49 @@
 import * as React from 'react';
+import SingleProduct from './SingleProduct';
+import uuid from 'uuid';
 
-const Products = () => {
 
+class Products extends React.Component {
+constructor(props) {
+    super(props);
+    this.state = {
+        products: [],
+        isLoading: false
+    }
+}
+    componentDidMount() {
+        this.setState({isLoading: true});
+        this.fetchProducts();
+    }
 
-    return (
-        <section className="content__sidebar">
-            <h3 className="sidebar__title">Products</h3>
-            <div className="sidebar__products-grid">
-                <div className="products__single-product">
-                    <p>Wallets</p>
-                    <p>500,00 PLN</p>
+    fetchProducts = () => {
+        const endpoint = 'https://efigence-camp.herokuapp.com/api/data/products';
+
+        fetch(endpoint)
+            .then(rawData => rawData.json())
+            .then(data => this.setState(({
+                products: [...data.content],
+                isLoading: false
+            }))
+        );
+    }
+
+    render() {
+        const {isLoading, products} = this.state;
+        return (
+            <section className="content__sidebar">
+                <h3 className="sidebar__title">Products</h3>
+                <div className="sidebar__products-grid">
+                    {products.map(product =>
+                        <SingleProduct
+                        key={uuid()}
+                        {...product}
+                        />
+                    )}
                 </div>
-                <div className="products__single-product">
-                    <p>Deposits</p>
-                    <p>10 000,00 PLN</p>
-                </div>
-                <div className="products__single-product">
-                    <p>Accounts</p>
-                    <p>7 200,00 PLN</p>
-                </div>
-                <div className="products__single-product">
-                    <p>Funds</p>
-                    <p>7 000,00 PLN</p>
-                </div>
-                <div className="products__single-product">
-                    <p>Bank loans</p>
-                    <p>-127 000,00 PLN</p>
-                </div>
-            </div>
-        </section>
-    )
+            </section>
+        )
+    }
 }
 
 

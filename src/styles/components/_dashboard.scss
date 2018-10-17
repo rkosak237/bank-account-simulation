@@ -1,4 +1,4 @@
-.main__container {
+.desktop__container {
     height: 100%;
     width: 100%;
     display: flex;
@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.dashboard__wrapper {
+.desktop__wrapper {
     width: 90%;
 }
 
@@ -58,10 +58,7 @@
     border: 1px solid black;
 }
 
-
-
-
-.dashboard__chart {
+.desktop__chart {
     height: $xxl-size*4;
     background: grey;
     width: 100%;
@@ -69,10 +66,7 @@
     border-radius: 10px;
 }
 
-
-
-
-.content {
+.desktop__content {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -99,6 +93,23 @@
     margin: 0 0 $m-size 0;
     border: 1px solid $input-color;
     border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.single-product_icon {
+    width: 80px;
+    height: 80px;
+    background: grey;
+
+}
+.single-product__description {
+    width: 50%;
+}
+
+.single-product__description__text {
+    font-size: $m-size;
 }
 
 
@@ -114,15 +125,55 @@
     padding: 0;
 }
 
-.list__element {
+.list__item {
     padding: $m-size 0;
     margin: $m-size 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: normal;
     border-bottom: 1px solid $input-color;
-
-    span {
-        font-size: $m-size;
-    }
+    font-size: $m-size;
+    width: 100%;
 }
 
+.item__date {
+    text-align: center;
+    width: 20%;
+}
+
+.item__description {
+    display: flex;
+    justify-content: left;
+    width: 40%;
+}
+
+.description__text {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 90%;
+}
+
+.item__category {
+    width: 20%;
+}
+
+.category__select {
+    border-radius: 10px;
+    padding: 2px;
+    width: 80%;
+}
+
+.item__amount {
+    text-align: right;
+    width: 15%;
+    font-weight: bold;
+
+    &--income {
+        color: $income;
+    }
+
+    &--outcome {
+        color: $outcome;
+    }
+}

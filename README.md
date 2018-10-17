@@ -1,6 +1,6 @@
-#  simple-react-boilerplate
+#  bank-account-simulation
 
-React boilerplate for everyone
+Bank account account simulation
 
 ## Features
 * [React (v16.3)](https://reactjs.org) - a JavaScript library for building user interfaces
@@ -11,13 +11,19 @@ React boilerplate for everyone
 * [Router](https://github.com/ReactTraining/react-router)
 * [React Hot Loader (v4)](https://github.com/gaearon/react-hot-loader) Tweak React components in real time
 
-```
+
 
 ## Development
 
-Start developing your own website:
+Firtst install npm to open files on your computer
 
-```bash
+```
+npm install
+```
+
+Type in your command line
+
+```e.g bash
 npm start
 ```
 

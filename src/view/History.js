@@ -3,7 +3,7 @@ import * as React from 'react';
 const History = () => {
 
     return (
-        <div className="main__container">
+        <div className="desktop__container">
             <div className="h-l-grid">
                 <h1 className="h-c__title">History</h1>
                 <div className="h-l-inputs__container">

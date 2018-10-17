@@ -2,7 +2,7 @@ import * as React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Header from '../components/Header';
-import Dashboard from '../view/Dashboard';
+import Desktop from '../view/Desktop';
 
 const AppRouter = () => (
     <BrowserRouter>
@@ -15,7 +15,7 @@ const AppRouter = () => (
                     timeout={200}
                     classNames="fade">
                     <Switch location={location}>
-                        <Route path="/" exact={true} component={Dashboard} />
+                        <Route path="/" exact={true} component={Desktop} />
                     </Switch>
                 </CSSTransition>
             </TransitionGroup>

@@ -2,7 +2,7 @@ import * as React from 'react';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import AppRouter from './routers/AppRouter';
-import Dashboard from './view/Dashboard';
+import Desktop from './view/Desktop';
 import History from './view/History';
 import Header from './components/Header';
 
@@ -15,7 +15,7 @@ import Header from './components/Header';
 const App = () => (
         <div>
                 <Header/>
-                <Dashboard />
+                <Desktop />
         </div>
 );
 
