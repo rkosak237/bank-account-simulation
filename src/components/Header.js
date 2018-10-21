@@ -23,7 +23,14 @@ const Header = () => (
                 <nav className="nav">
                     <ul className="nav-list">
                         <li className="nav-list__item">
-                            <a className="nav__text" href="#">Home</a>
+                            <NavLink className="nav__text" to="/" activeClassName="selected">
+                            Home
+                            </NavLink>
+                        </li>
+                        <li className="nav-list__item">
+                            <NavLink className="nav__text" to="/history" activeClassName="selected">
+                            History
+                            </NavLink>
                         </li>
                         <li className="nav-list__item">
                             <a className="nav__text" href="#">Analyse</a>
@@ -32,7 +39,9 @@ const Header = () => (
                             <a className="nav__text" href="#">Plan</a>
                         </li>
                         <li className="nav-list__item">
-                            <a className="nav__text" href="#">Earn</a>
+                            <NavLink className="nav__text" to="/transfer" activeClassName="selected">
+                            Transfer
+                            </NavLink>
                         </li>
                         <li className="nav-list__item">
                             <a className="nav__text" href="#">Search</a>

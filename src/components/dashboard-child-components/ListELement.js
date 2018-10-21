@@ -11,14 +11,14 @@ const ListElement = (
     array}
     ) => {
         return (
-            <li className="list__item">
-                <div className="item__date">{date}</div>
-                <div className="item__description">
-                    <p className="description__text">
+            <li className="listElement">
+                <div className="listElement__date">{date}</div>
+                <div className="listElement__text-wrapper">
+                    <p className="listElement__text">
                         {description}
                     </p>
                 </div>
-                <div className="item__category">
+                <div className="listElement__category">
                     <select className="category__select">
                         <option value="">{category}</option>
                         {array.filter(value => value !== category)
@@ -30,8 +30,8 @@ const ListElement = (
                         }
                     </select>
                 </div>
-                <div className="item__amount">
-                    <span className={status == `income` ? `item__amount--income` : `item__amount--outcome`}>
+                <div className="listElement__amount">
+                    <span className={status == `income` ? `listElement__amount--income` : `listElement__amount--outcome`}>
                     {status == 'income' ? amount : -amount} {currency}
                     </span>
                 </div>

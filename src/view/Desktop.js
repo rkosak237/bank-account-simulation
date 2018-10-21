@@ -6,8 +6,8 @@ import Products from '../components/dashboard-child-components/Products';
 import SidebarHistory from '../components/dashboard-child-components/SidebarHistory';
 
 const Desktop = () => (
-    <div className="desktop__container">
-        <div className="desktop__wrapper">
+    <div className="main__container">
+        <div className="main__grid">
             <QuickPayments/>
             <Summary />
             <DesktopChart />

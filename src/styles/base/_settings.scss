@@ -11,6 +11,7 @@
 $background-color: #fff;
 $font-color: #202020;
 $input-color: #929090;
+$border-color: #929090;
 
 //section colors
 $h1-color: #000;
@@ -27,9 +28,11 @@ $outcome: #e74c3c;
 
 //btn colors
 $btn-hamburger: #000;
+$btn-focus-font: #fff;
+$btn-focus-bg: #0076FF;
 $btn-background: #0076FF;
 $btn-text: #fff;
-$btn-hover-background: lighten($blue-accent, 10%);
+$btn-hover-background: lighten($blue-accent, 40%);;
 $btn-hover-text: #fff;
 $btn-disabled: #635e5e;
 

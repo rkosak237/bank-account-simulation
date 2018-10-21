@@ -1,7 +1,14 @@
 .h-l-grid {
     display: flex;
-    width: 90%;
     justify-content: space-between;
+    margin:$s-size 0 0 0;
+}
+
+.history__wrapper {
+    border: 1px solid $border-color;
+    border-radius: 10px;
+    height: 50vh;
+    overflow-y: scroll;
 }
 
 .h-c__title {
@@ -10,6 +17,7 @@
 
 .h-l-inputs__container {
     @extend .h-l-grid;
+    @extend .main__grid;
     width: 100%;
     flex: 1;
     align-items: center;
@@ -23,8 +31,9 @@
 
 .h-l-grid--column {
     flex-direction: column;
-    margin-bottom: $xxl-size;
-    @extend .h-l-grid
+    margin-bottom: $xl-size;
+    @extend .h-l-grid;
+    width: 70%;
 }
 
 .h-l__label {

@@ -29,14 +29,14 @@ constructor(props) {
 
     render() {
         const { historyBills } = this.state;
-        const filtered = historyBills.map(item => item.category).filter((item, index, array) => array.indexOf(item) === index);
-        console.log(filtered);
+        const filtered = historyBills
+        .map(item => item.category)
+        .filter((item, index, array) => array.indexOf(item) === index);
         return (
-            <section className="content__sidebar">
+            <section className="content__sidebar sidebarHistory">
                 <h3 className="sidebar__title">History</h3>
-                <div className="sidebar__history-grid">
-                    <div className="history__list">
-                        <ul className="list">
+                <div className="sidebarHistory__wrapper">
+                        <ul className="sidebarHistory__list">
                             {historyBills.map(bill =>
                                 <ListElement
                                 key={bill.id}
@@ -44,7 +44,6 @@ constructor(props) {
                                 {...bill}
                             />)}
                         </ul>
-                    </div>
                 </div>
             </section>
         );

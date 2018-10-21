@@ -63,14 +63,17 @@
     list-style: none;
     display: flex;
     height: 100%;
+    width: 100%;
+    justify-content: center;
 }
 
 .nav-list__item {
-    width: $xxl-size;
     text-align: center;
 }
 
 .nav__text {
+    padding-left: $s-size;
+    padding-right: $s-size;
     text-decoration: none;
     font-size: $m-size;
     color: $font-color;
@@ -82,7 +85,11 @@
     height: 100%;
 
     &:hover {
-        background: lighten($blue-accent, 40%);
+        background: $btn-hover-background;
+    }
+    &:focus {
+        color: $btn-focus-font;
+        background: $btn-focus-bg;
     }
 }
 

@@ -10,7 +10,7 @@ constructor(props) {
         products: [],
         isLoading: false
     }
-}
+}       fff
     componentDidMount() {
         this.setState({isLoading: true});
         this.fetchProducts();

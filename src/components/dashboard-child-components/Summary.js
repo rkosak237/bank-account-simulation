@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 class Summary extends React.Component {
 constructor(props) {
@@ -45,12 +46,18 @@ constructor(props) {
                         <h2>Scheduled payments</h2>
                         <span className="preview__text"> <b>
                         {isLoading ? `Loading...` : payments}</b> PLN</span>
-                        <button className="payment__btn">FAST PAY</button>
+                        <Link to="/Transfer">
+                            <button className="btn payment__btn">FAST PAY</button>
+                        </Link>
                     </div>
                 </div>
                 <div className="summary__analysis">
-                    <p>Account analysis</p>
-                    <span className="toggle_placeholder">toggle</span>
+                    <div className="toggle">
+                        <input type="checkbox" />
+                        <span className="toggle__btn"></span>
+                        <span className="toggle__label"></span>
+                        <span className="toggle__bg"></span>
+                    </div>
                 </div>
             </div>
         )

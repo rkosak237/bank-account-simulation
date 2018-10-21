@@ -17,25 +17,7 @@ h1 {
     color: $font-color;
 }
 
-button {
-    border: none;
-    padding: $s-size $l-size;
-    font-weight: 600;
-    font-size: $m-size;
-    letter-spacing: 2px;
-    transition: .3s ease-in-out;
-
-    &:hover {
-        background: $btn-hover-background;
-        color: $btn-hover-text;
-    }
-}
-
-button:disabled {
-    background: $btn-disabled;
-    transition: .3 ease-in-out;
-}
 
 .border {
-    border: 2px solid black;
+    border: 1px solid black;
 }

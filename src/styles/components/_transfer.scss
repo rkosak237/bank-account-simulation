@@ -1,0 +1,77 @@
+.transfer-card {
+    border-radius: 10px;
+    height: auto;
+    width: 60rem;
+    margin: $m-size 0 $m-size 0;
+}
+
+.transfer-card__wrapper {
+    padding: $s-size;
+}
+.previous-page {
+    display: block;
+    font-size: $m-size;
+    margin-bottom: $m-size;
+}
+
+.transfer__select-container {
+    height: $l-size;
+    border: 1px solid $border-color;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.transfer-card__content-grid {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.transfer__add-account {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    width: 70%;
+}
+
+.add-account__icon {
+    display: block;
+    content: '';
+    height: $l-size;
+    width: $l-size;
+    background: grey;
+    margin-right: $s-size;
+}
+
+.transfer__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+}
+
+.aside__text {
+    width: 20%;
+}
+
+.aside__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.type__list {
+    list-style: none;
+    padding: 0;
+}
+
+.type__list-item {
+    text-align: center;
+    width: 12.6%;
+}
+
+.recipent__input {
+    height: $m-size;
+    width: 100%;
+}

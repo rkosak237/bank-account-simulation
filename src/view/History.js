@@ -1,10 +1,42 @@
 import * as React from 'react';
+import ListElement from '../components/dashboard-child-components/ListELement';
+import uuid from 'uuid';
 
-const History = () => {
+class History extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                historyBills: [],
+                isLoading: false
+            }
+        }
 
-    return (
-        <div className="desktop__container">
-            <div className="h-l-grid">
+        componentDidMount() {
+        this.setState({isLoading: true});
+        this.fetchHistory();
+    }
+
+
+    fetchHistory = () => {
+        const endpoint = 'https://efigence-camp.herokuapp.com/api/data/history';
+
+        fetch(endpoint)
+            .then(rawData => rawData.json())
+            .then(data => this.setState(prevState => ({
+                historyBills: [...prevState.historyBills, ...data.content],
+                isLoading: false
+            }))
+        );
+    }
+
+    render() {
+        const { historyBills } = this.state;
+        const filtered = historyBills
+        .map(item => item.category)
+        .filter((item, index, array) => array.indexOf(item) === index);
+        return (
+            <div className="main__container">
+            <div className="h-l-grid main__grid">
                 <h1 className="h-c__title">History</h1>
                 <div className="h-l-inputs__container">
                     <div className="inputs__element">
@@ -13,11 +45,16 @@ const History = () => {
                     </div>
                     <div className="inputs__element">
                         <label className="h-l__label" htmlFor="">Filter by</label>
-                        <select className="h-l__select" name="" id="">
-                            <option value="">a</option>
-                            <option value="">b</option>
-                            <option value="">c</option>
-                        </select>
+                        <select className="h-l__select">
+                            <option value="all">Show all</option>
+                            {filtered.filter(value => value !== historyBills.category)
+                                .map(item =>
+                                    <option
+                                    key={uuid()}
+                                    value="">{item}</option>
+                                )
+                            }
+                    </select>
                     </div>
                 </div>
             </div>
@@ -32,96 +69,12 @@ const History = () => {
                     <div className="history__wrapper">
                     <div className="history__list">
                         <ul className="list">
-                            <li className="list__element">
-                                <span>29.06</span>
-                                <span>Gas station Shell, Woloska Street</span>
-                                <select>
-                                    <option value="">gas</option>
-                                    <option value="">food</option>
-                                    <option value="">fun</option>
-                                </select>
-                                <span>-100,00 PLN</span>
-                            </li>
-                            <li className="list__element">
-                                <span>29.06</span>
-                                <span>Gas station Shell, Woloska Street</span>
-                                <select>
-                                    <option value="">gas</option>
-                                    <option value="">food</option>
-                                    <option value="">fun</option>
-                                </select>
-                                <span>-100,00 PLN</span>
-                            </li>
-                            <li className="list__element">
-                                <span>29.06</span>
-                                <span>Gas station Shell, Woloska Street</span>
-                                <select>
-                                    <option value="">gas</option>
-                                    <option value="">food</option>
-                                    <option value="">fun</option>
-                                </select>
-                                <span>-100,00 PLN</span>
-                            </li>
-                            <li className="list__element">
-                                <span>29.06</span>
-                                <span>Gas station Shell, Woloska Street</span>
-                                <select>
-                                    <option value="">gas</option>
-                                    <option value="">food</option>
-                                    <option value="">fun</option>
-                                </select>
-                                <span>-100,00 PLN</span>
-                            </li>
-                            <li className="list__element">
-                                <span>29.06</span>
-                                <span>Gas station Shell, Woloska Street</span>
-                                <select>
-                                    <option value="">gas</option>
-                                    <option value="">food</option>
-                                    <option value="">fun</option>
-                                </select>
-                                <span>-100,00 PLN</span>
-                            </li>
-                            <li className="list__element">
-                                <span>29.06</span>
-                                <span>Gas station Shell, Woloska Street</span>
-                                <select>
-                                    <option value="">gas</option>
-                                    <option value="">food</option>
-                                    <option value="">fun</option>
-                                </select>
-                                <span>-100,00 PLN</span>
-                            </li>
-                            <li className="list__element">
-                                <span>29.06</span>
-                                <span>Gas station Shell, Woloska Street</span>
-                                <select>
-                                    <option value="">gas</option>
-                                    <option value="">food</option>
-                                    <option value="">fun</option>
-                                </select>
-                                <span>-100,00 PLN</span>
-                            </li>
-                            <li className="list__element">
-                                <span>29.06</span>
-                                <span>Gas station Shell, Woloska Street</span>
-                                <select>
-                                    <option value="">gas</option>
-                                    <option value="">food</option>
-                                    <option value="">fun</option>
-                                </select>
-                                <span>-100,00 PLN</span>
-                            </li>
-                            <li className="list__element">
-                                <span>29.06</span>
-                                <span>Gas station Shell, Woloska Street</span>
-                                <select>
-                                    <option value="">gas</option>
-                                    <option value="">food</option>
-                                    <option value="">fun</option>
-                                </select>
-                                <span>-100,00 PLN</span>
-                            </li>
+                            {historyBills.map(bill =>
+                                <ListElement
+                                key={bill.id}
+                                array={filtered}
+                                {...bill}
+                            />)}
                         </ul>
                     </div>
                 </div>
@@ -129,6 +82,7 @@ const History = () => {
             </div>
         </div>
     )
+}
 }
 
 export default History;
