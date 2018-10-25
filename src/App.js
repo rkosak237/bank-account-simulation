@@ -2,9 +2,12 @@ import * as React from 'react';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import AppRouter from './routers/AppRouter';
+import { Provider } from 'react-redux'
+import store from './store/configureStore';
 import Desktop from './view/Desktop';
 import History from './view/History';
 import Header from './components/Header';
+
 
 // const App = () => (
 //       <div>
@@ -13,9 +16,9 @@ import Header from './components/Header';
 // );
 
 const App = () => (
-        <div>
+        <Provider store={store}>
                 <AppRouter />
-        </div>
+        </Provider>
 );
 
 export default App;

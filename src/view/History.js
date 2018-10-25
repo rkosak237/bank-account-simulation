@@ -1,36 +1,13 @@
 import * as React from 'react';
 import ListElement from '../components/dashboard-child-components/ListELement';
 import uuid from 'uuid';
+import { connect } from 'react-redux';
+import { fetchHistory } from '../actions/fetchActions';
 
 class History extends React.Component {
-        constructor(props) {
-            super(props);
-            this.state = {
-                historyBills: [],
-                isLoading: false
-            }
-        }
-
-        componentDidMount() {
-        this.setState({isLoading: true});
-        this.fetchHistory();
-    }
-
-
-    fetchHistory = () => {
-        const endpoint = 'https://efigence-camp.herokuapp.com/api/data/history';
-
-        fetch(endpoint)
-            .then(rawData => rawData.json())
-            .then(data => this.setState(prevState => ({
-                historyBills: [...prevState.historyBills, ...data.content],
-                isLoading: false
-            }))
-        );
-    }
 
     render() {
-        const { historyBills } = this.state;
+        const historyBills = this.props.history;
         const filtered = historyBills
         .map(item => item.category)
         .filter((item, index, array) => array.indexOf(item) === index);
@@ -84,5 +61,9 @@ class History extends React.Component {
     )
 }
 }
+const mapStateToProps = state => ({
+    history: state.history.itemsHistory
+})
 
-export default History;
+
+export default connect(mapStateToProps, { fetchHistory })(History);

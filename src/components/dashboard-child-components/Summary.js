@@ -1,51 +1,44 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { fetchSummary } from '../../actions/fetchActions';
 
 class Summary extends React.Component {
 constructor(props) {
     super(props);
     this.state = {
-        items: {},
         isLoading: false
     }
 }
     componentDidMount() {
-        this.setState({isLoading: true});
-        this.fetchSummary();
+        this.props.fetchSummary();
     }
 
-    fetchSummary = () => {
-        const endpoint = 'https://efigence-camp.herokuapp.com/api/data/summary';
-
-        fetch(endpoint)
-            .then(rawData => rawData.json())
-            .then(data => this.setState(prevState => ({
-                items: data.content[0],
-                isLoading: false
-            }))
-        );
-    }
 
     render() {
-        const { isLoading, items } = this.state;
-        const { balance, funds, payments} = this.state.items;
+        const { isLoading } = this.state;
+        const { balance, funds, payments} = this.props.summary;
+        console.log(this.props.summary);
         return (
             <div className="summary">
                 <div className="summary__preview">
                     <div>
                         <h2>Balance</h2>
                         <span className="preview__text"> <b>
-                        {isLoading ? `Loading...` : balance}</b> PLN</span>
+                        {isLoading ? `Loading...` : balance}
+                        </b> PLN</span>
                     </div>
                     <div>
                         <h2>Available funds</h2>
                         <span className="preview__text"> <b>
-                        {isLoading ? `Loading...` : funds}</b> PLN</span>
+                        {isLoading ? `Loading...` : funds}
+                        </b> PLN</span>
                     </div>
                     <div>
                         <h2>Scheduled payments</h2>
                         <span className="preview__text"> <b>
-                        {isLoading ? `Loading...` : payments}</b> PLN</span>
+                        {isLoading ? `Loading...` : payments}
+                        </b> PLN</span>
                         <Link to="/Transfer">
                             <button className="btn payment__btn">FAST PAY</button>
                         </Link>
@@ -64,4 +57,8 @@ constructor(props) {
     }
 };
 
-export default Summary;
+const mapStateToProps = state => ({
+    summary: state.summary.itemsSummary
+})
+
+export default connect(mapStateToProps, { fetchSummary })(Summary);

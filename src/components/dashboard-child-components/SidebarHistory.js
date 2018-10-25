@@ -1,34 +1,22 @@
 import * as React from 'react';
 import ListElement from './ListELement';
+import { connect } from 'react-redux';
+import { fetchHistory } from '../../actions/fetchActions';
 
 class SidebarHistory extends React.Component {
 constructor(props) {
     super(props);
     this.state = {
-        historyBills: [],
         isLoading: false
     }
 }
     componentDidMount() {
         this.setState({isLoading: true});
-        this.fetchHistory();
-    }
-
-
-    fetchHistory = () => {
-        const endpoint = 'https://efigence-camp.herokuapp.com/api/data/history';
-
-        fetch(endpoint)
-            .then(rawData => rawData.json())
-            .then(data => this.setState(prevState => ({
-                historyBills: [...prevState.historyBills, ...data.content],
-                isLoading: false
-            }))
-        );
+        this.props.fetchHistory();
     }
 
     render() {
-        const { historyBills } = this.state;
+        const historyBills = this.props.history;
         const filtered = historyBills
         .map(item => item.category)
         .filter((item, index, array) => array.indexOf(item) === index);
@@ -49,8 +37,11 @@ constructor(props) {
         );
     }
 };
+const mapStateToProps = state => ({
+    history: state.history.itemsHistory
+})
 
-export default SidebarHistory;
+export default connect(mapStateToProps, { fetchHistory })(SidebarHistory);
 
 
 

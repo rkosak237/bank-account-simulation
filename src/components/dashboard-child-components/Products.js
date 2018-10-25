@@ -1,35 +1,26 @@
 import * as React from 'react';
 import SingleProduct from './SingleProduct';
 import uuid from 'uuid';
+import { connect } from 'react-redux';
+import { fetchProducts } from '../../actions/fetchActions';
 
 
 class Products extends React.Component {
 constructor(props) {
     super(props);
     this.state = {
-        products: [],
         isLoading: false
     }
-}       fff
+}
     componentDidMount() {
         this.setState({isLoading: true});
-        this.fetchProducts();
+        this.props.fetchProducts();
     }
 
-    fetchProducts = () => {
-        const endpoint = 'https://efigence-camp.herokuapp.com/api/data/products';
-
-        fetch(endpoint)
-            .then(rawData => rawData.json())
-            .then(data => this.setState(({
-                products: [...data.content],
-                isLoading: false
-            }))
-        );
-    }
 
     render() {
-        const {isLoading, products} = this.state;
+        const {isLoading} = this.state;
+        const products = this.props.products
         return (
             <section className="content__sidebar">
                 <h3 className="sidebar__title">Products</h3>
@@ -45,6 +36,8 @@ constructor(props) {
         )
     }
 }
+const mapStateToProps = state => ({
+    products: state.products.itemsProducts
+})
 
-
-export default Products;
+export default connect(mapStateToProps, { fetchProducts })(Products);
