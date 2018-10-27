@@ -2,6 +2,7 @@ import * as React from 'react';
 import ListElement from './ListELement';
 import { connect } from 'react-redux';
 import { fetchHistory } from '../../actions/fetchActions';
+import Proptypes from 'prop-types';
 
 class SidebarHistory extends React.Component {
 constructor(props) {
@@ -16,10 +17,11 @@ constructor(props) {
     }
 
     render() {
-        const historyBills = this.props.history;
+        const historyBills = this.props.fetchItems;
         const filtered = historyBills
         .map(item => item.category)
         .filter((item, index, array) => array.indexOf(item) === index);
+        console.log(historyBills);
         return (
             <section className="content__sidebar sidebarHistory">
                 <h3 className="sidebar__title">History</h3>
@@ -38,8 +40,12 @@ constructor(props) {
     }
 };
 const mapStateToProps = state => ({
-    history: state.history.itemsHistory
+    fetchItems: state.fetchItems.itemsHistory
 })
+
+SidebarHistory.proptypes = {
+    fetchHistory: Proptypes.func.isRequired
+}
 
 export default connect(mapStateToProps, { fetchHistory })(SidebarHistory);
 

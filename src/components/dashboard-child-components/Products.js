@@ -20,7 +20,7 @@ constructor(props) {
 
     render() {
         const {isLoading} = this.state;
-        const products = this.props.products
+        const products = this.props.fetchItems;
         return (
             <section className="content__sidebar">
                 <h3 className="sidebar__title">Products</h3>
@@ -37,7 +37,7 @@ constructor(props) {
     }
 }
 const mapStateToProps = state => ({
-    products: state.products.itemsProducts
+    fetchItems: state.fetchItems.itemsProducts
 })
 
 export default connect(mapStateToProps, { fetchProducts })(Products);

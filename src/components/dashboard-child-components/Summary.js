@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchSummary } from '../../actions/fetchActions';
+import Proptypes from 'prop-types';
 
 class Summary extends React.Component {
 constructor(props) {
@@ -14,11 +15,9 @@ constructor(props) {
         this.props.fetchSummary();
     }
 
-
     render() {
         const { isLoading } = this.state;
-        const { balance, funds, payments} = this.props.summary;
-        console.log(this.props.summary);
+        const { balance, funds, payments} = this.props.fetchItems;
         return (
             <div className="summary">
                 <div className="summary__preview">
@@ -58,7 +57,11 @@ constructor(props) {
 };
 
 const mapStateToProps = state => ({
-    summary: state.summary.itemsSummary
+    fetchItems: state.fetchItems.itemsSummary
 })
+
+Summary.proptypes = {
+    fetchSummary: Proptypes.func.isRequired
+}
 
 export default connect(mapStateToProps, { fetchSummary })(Summary);

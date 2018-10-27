@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import fetchReducer from './fetchReducer';
+import filterReducer from './filterReducer';
 
 const rootReducer = combineReducers({
-    history: fetchReducer,
-    products: fetchReducer,
-    summary: fetchReducer
+    fetchItems: fetchReducer,
+    filters: filterReducer
 });
 
 

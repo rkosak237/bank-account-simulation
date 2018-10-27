@@ -3,11 +3,12 @@ import ListElement from '../components/dashboard-child-components/ListELement';
 import uuid from 'uuid';
 import { connect } from 'react-redux';
 import { fetchHistory } from '../actions/fetchActions';
+import filterExpenses  from '../selectors/filters';
 
 class History extends React.Component {
 
     render() {
-        const historyBills = this.props.history;
+        const historyBills = this.props.fetchItems;
         const filtered = historyBills
         .map(item => item.category)
         .filter((item, index, array) => array.indexOf(item) === index);
@@ -28,9 +29,11 @@ class History extends React.Component {
                                 .map(item =>
                                     <option
                                     key={uuid()}
-                                    value="">{item}</option>
+                                    value={item}>{item}</option>
                                 )
                             }
+                            <option value="Income">Income</option>
+                            <option value="Outcome">Outcome</option>
                     </select>
                     </div>
                 </div>
@@ -62,7 +65,7 @@ class History extends React.Component {
 }
 }
 const mapStateToProps = state => ({
-    history: state.history.itemsHistory
+    fetchItems: filterExpenses(state.fetchItems.itemsHistory, state.filters)
 })
 
 
