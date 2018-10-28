@@ -1,4 +1,5 @@
 import { FILTER_DESCRIPTION, FILTER_CATEGORY, FILTER_AMOUNT, FILTER_STATUS } from '../actions/types';
+
 const filtersReducerDefaultState = {
     id: '',
     date: '',

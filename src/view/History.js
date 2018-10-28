@@ -2,12 +2,32 @@ import * as React from 'react';
 import ListElement from '../components/dashboard-child-components/ListELement';
 import uuid from 'uuid';
 import { connect } from 'react-redux';
-import { fetchHistory } from '../actions/fetchActions';
 import filterExpenses  from '../selectors/filters';
+import { filterCategory, filterDescription, filterStatus } from '../actions/filters';
 
 class History extends React.Component {
 
+    handleChangeSelect = (e) => {
+        const { dispatch } = this.props;
+        dispatch(filterCategory(e.target.value));
+        e.preventDefault();
+    }
+
+    handleChangeSelectStatus = (e) => {
+        const { dispatch } = this.props;
+        dispatch(filterStatus(e.target.value));
+        e.preventDefault();
+    }
+
+    handleChangeSearch = (e) => {
+        const { dispatch } = this.props;
+        dispatch(filterDescription(e.target.value));
+        e.preventDefault();
+    }
+
+
     render() {
+        const { filters } = this.props;
         const historyBills = this.props.fetchItems;
         const filtered = historyBills
         .map(item => item.category)
@@ -19,19 +39,33 @@ class History extends React.Component {
                 <div className="h-l-inputs__container">
                     <div className="inputs__element">
                         <label className="h-l__label" htmlFor="">Search</label>
-                        <input className="h-l_search" type="text"/>
+                        <input
+                        className="h-l_search"
+                        onChange={this.handleChangeSearch}
+                        value={filters.description}
+                        type="text"/>
                     </div>
                     <div className="inputs__element">
                         <label className="h-l__label" htmlFor="">Filter by</label>
-                        <select className="h-l__select">
-                            <option value="all">Show all</option>
-                            {filtered.filter(value => value !== historyBills.category)
+                        <select
+                        onChange={this.handleChangeSelect}
+                        value={filters.category}
+                        className="h-l__select">
+                            <option value="Show all">Show all</option>
+                            {
+                                filtered
                                 .map(item =>
                                     <option
                                     key={uuid()}
                                     value={item}>{item}</option>
                                 )
                             }
+                    </select>
+                    <select
+                        onChange={this.handleChangeSelectStatus}
+                        value={filters.status}
+                        className="h-l__select">
+                            <option value="Show all">Show all</option>
                             <option value="Income">Income</option>
                             <option value="Outcome">Outcome</option>
                     </select>
@@ -65,8 +99,9 @@ class History extends React.Component {
 }
 }
 const mapStateToProps = state => ({
-    fetchItems: filterExpenses(state.fetchItems.itemsHistory, state.filters)
+    fetchItems: filterExpenses(state.fetchItems.itemsHistory, state.filters),
+    filters: state.filters
 })
 
 
-export default connect(mapStateToProps, { fetchHistory })(History);
+export default connect(mapStateToProps)(History);

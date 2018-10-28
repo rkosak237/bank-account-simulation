@@ -2,13 +2,13 @@ import * as React from 'react';
 import uuid from 'uuid';
 
 const ListElement = (
-    {date,
+    { date,
     description,
     category,
     amount,
     currency,
     status,
-    array}
+    array }
     ) => {
         return (
             <li className="listElement">

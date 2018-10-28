@@ -4,9 +4,6 @@ import './styles/styles.scss';
 import AppRouter from './routers/AppRouter';
 import { Provider } from 'react-redux'
 import store from './store/configureStore';
-import Desktop from './view/Desktop';
-import History from './view/History';
-import Header from './components/Header';
 
 
 // const App = () => (
@@ -20,5 +17,8 @@ const App = () => (
                 <AppRouter />
         </Provider>
 );
+setTimeout(() => {
+        console.log(store.getState());
+}, 5000);
 
 export default App;
