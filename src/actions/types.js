@@ -9,3 +9,8 @@ export const FILTER_DESCRIPTION = 'FILTER_DESCRIPTION';
 export const FILTER_CATEGORY = 'FILTER_CATEGORY';
 export const FILTER_AMOUNT = 'FILTER_AMOUNT';
 export const FILTER_STATUS = 'FILTER_STATUS';
+
+//form
+export const LOG_MAIL = 'LOG_MAIL';
+export const LOG_PASSWORD = 'LOG_PASSWORD';
+

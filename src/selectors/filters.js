@@ -1,9 +1,11 @@
 //selectors
 
-export default (expenses, { description, category, amount, status }) => {
+export default (expenses, { description, category, amount, status, currency }) => {
     return expenses.filter(expense => {
+
+        console.log(expense);
         if(category  == 'Show all') {
-            return expense;
+            return category = '';
         } else {
             const statusMatch = expense.status.includes(status.toLowerCase());
             const descriptionMatch = expense.description.includes(description);

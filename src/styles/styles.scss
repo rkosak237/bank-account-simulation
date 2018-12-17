@@ -1,14 +1,37 @@
 //general styles
 
 @import './base/settings';
+// @import './components/transitionGroup';
 @import './base/base';
+@import './base/media-queries';
+@import './components/general/buttons';
+@import './components/general/header';
+@import './components/general/nav';
+@import './components/general/footer';
+@import './components/general/listElement';
 
-//components
-@import './components/buttons';
-@import './components/header';
-@import './components/dashboard';
-@import './components/history';
-@import './components/listElement';
-@import './components/products';
-@import './components/transfer';
 
+//login-page
+
+
+
+//dashboard
+@import './components/dashboard/d-page';
+@import './components/dashboard/summary';
+@import './components/dashboard/toggle';
+@import './components/dashboard/quick-payments';
+@import './components/dashboard/chart';
+@import './components/dashboard/products';
+@import './components/dashboard/history';
+
+//history
+@import './components/history/h-page';
+@import './components/history/inputs';
+//transfer
+@import './components/transfer/t-page';
+
+//calendar
+
+
+//signup - login
+@import './components/signup/form';

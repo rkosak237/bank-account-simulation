@@ -20,12 +20,12 @@ const ListElement = (
                 </div>
                 <div className="listElement__category">
                     <select className="category__select">
-                        <option value="">{category}</option>
+                        <option value="Show all">{category}</option>
                         {array.filter(value => value !== category)
                             .map(item =>
                                 <option
                                 key={uuid()}
-                                value="">{item}</option>
+                                value={category}>{item}</option>
                             )
                         }
                     </select>

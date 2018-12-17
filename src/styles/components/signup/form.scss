@@ -1,0 +1,97 @@
+.signUp {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding: 2rem;
+        box-shadow: 0 37.125px 70px -12.125px rgba(0, 0, 0, 0.3);
+        height: 45rem;
+        width: 100%;
+        animation: slide-from-fade 1s ease-in-out 0s 1;
+
+
+            @keyframes slide-from-fade {
+                0% {
+                    transform: translateY(10%);
+                    opacity: 0;
+                }
+
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+        @media (min-width: $phone-big) {
+            width: 55rem;
+            padding: 5rem;
+
+        }
+    }
+
+}
+.LogIn {
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 10rem;
+    }
+
+    &__form {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__label {
+        font-size: $m-size;
+        font-weight: 600;
+    }
+    &__input {
+        border: none;
+        border-bottom: 1px solid grey;
+        padding: 1rem 0 1rem 1.5rem;
+    }
+
+    &__error {
+        padding: 1rem 0 1rem 0;
+        color: red;
+        animation: slide-from-fade 1s ease-in-out 0s 1;
+        display: none;
+        transition: .2s ease-in-out;
+
+
+        @keyframes slide-from-fade {
+            0% {
+                transform: translateY(10%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    }
+    &__error--visible {
+        display: block;
+        animation: slide-from-fade 1s ease-in-out 0s 1;
+
+        @keyframes slide-from-fade {
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            0% {
+                transform: translateY(10%);
+                opacity: 0;
+            }
+        }
+    }
+}

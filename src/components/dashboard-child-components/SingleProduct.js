@@ -35,7 +35,7 @@ const SingleProduct = ({type, amount, currency}) => {
         }
     }
     return(
-        <div className="products__single-product">
+        <a className="products__single-product" href='#'>
             <div className="single-product__icon">
                {switchFunc(type)}
                {type}
@@ -44,7 +44,7 @@ const SingleProduct = ({type, amount, currency}) => {
                 <p className="single-product__description__text">{title}</p>
                 <p className="single-product__description__text">{amount} {currency}</p>
             </div>
-        </div>
+        </a>
     )
 }
 export default SingleProduct;

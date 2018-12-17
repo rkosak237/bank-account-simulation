@@ -1,0 +1,15 @@
+.quick-payments {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @media (min-width: $tablet-landscape) {
+        flex-direction: row;
+    }
+}
+
+.quick-payments__title {
+    font-size: $xl-size;
+}

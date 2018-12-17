@@ -1,0 +1,28 @@
+.summary {
+    display: flex;
+    margin: $l-size 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    @media (min-width: $tablet-landscape) {
+        flex-direction: row;
+    }
+
+}
+
+.summary__preview {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 0 $m-size 0;
+
+    @media (min-width: $tablet-landscape) {
+        width: 50%;
+        margin: 0 0 $s-size 0;
+    }
+}
+
+.summary__analysis {
+    display: flex;
+}

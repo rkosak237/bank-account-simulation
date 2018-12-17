@@ -1,0 +1,37 @@
+.main__container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__grid {
+    width: 90%;
+
+}
+
+.preview__text {
+    font-size: $m-size*1.5;
+}
+
+.desktop__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: $xl-size;
+    height: auto;
+
+    @media (min-width: $tablet-landscape) {
+        flex-direction: row;
+    }
+}
+
+.content__sidebar {
+    width: 100%;
+
+    @media (min-width: $tablet-landscape) {
+        width:48%;
+    }
+}
