@@ -18,6 +18,7 @@ constructor(props) {
 
     render() {
         const historyBills = this.props.fetchItems;
+        console.log(historyBills.length);
         const filtered = historyBills
         .map(item => item.category)
         .filter((item, index, array) => array.indexOf(item) === index);
