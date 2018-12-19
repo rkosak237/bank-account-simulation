@@ -26,7 +26,8 @@ describe('actions used for filtering data', () => {
         })
     })
 
-    it('Should filter category', () => {
+
+    it('Should filter amount', () => {
         const action = filterAmount(2350);
 
         expect(action).toEqual({
@@ -34,6 +35,8 @@ describe('actions used for filtering data', () => {
             amount: 2350
         })
     })
+
+
 
     it('Should filter status', () => {
         const action = filterStatus('income');
