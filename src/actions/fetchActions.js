@@ -1,18 +1,6 @@
 import { FETCH_HISTORY, FETCH_PRODUCTS, FETCH_SUMMARY } from './types';
 
-// export const fetchHistory = () => dispatch => {
-//     fetch('https://efigence-camp.herokuapp.com/api/data/history')
-//         .then(rawData => rawData.json())
-//         .then(history =>
-//             dispatch({
-//                 type: FETCH_HISTORY,
-//                 payload: history.content
-//             })
-//     );
-// }
-
-export function fetchHistory() {
-    return dispatch => {
+export const fetchHistory = () => dispatch => {
     fetch('https://efigence-camp.herokuapp.com/api/data/history')
         .then(rawData => rawData.json())
         .then(history =>
@@ -20,9 +8,9 @@ export function fetchHistory() {
                 type: FETCH_HISTORY,
                 payload: history.content
             })
-        );
-    }
-};
+    );
+}
+
 
 export const fetchProducts = () => dispatch => {
     fetch('https://efigence-camp.herokuapp.com/api/data/products')

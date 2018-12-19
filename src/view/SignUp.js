@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { withRouter } from "react-router-dom";
 import LogIn from '../components/login/LogIn';
- // Initialize Firebase
 
 class SignUp extends React.Component {
 constructor(props) {
