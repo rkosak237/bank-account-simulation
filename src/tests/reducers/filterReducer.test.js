@@ -6,13 +6,13 @@ import {
     FILTER_STATUS
 } from '../../actions/types';
 
-describe('Request reducer', () => {
+describe('Filter reducer', () => {
     const initialState = {
         id: '',
-        date: '',
+        date: undefined,
         description: '',
         category: '',
-        amount: '',
+        amount: undefined,
         status: '',
     }
 
@@ -22,6 +22,20 @@ describe('Request reducer', () => {
         expect(state).toEqual(initialState)
     })
 
+    //filter description
+    it('should filters description', () => {
+        const description = 'Test is the description';
+        const action = {
+            type: FILTER_DESCRIPTION,
+            description
+        }
+        const state = filterReducer(undefined, action)
+
+        expect(state.description).toBe(description);
+    })
+
+
+    //filter category
     it('should filters category', () => {
         const category = 'Food is the category';
         const action = {
@@ -32,6 +46,31 @@ describe('Request reducer', () => {
 
         expect(state.category).toBe(category);
     })
+
+    //filter amount
+    it('should filters amount', () => {
+        const amount = 2500;
+        const action = {
+            type: FILTER_AMOUNT,
+            amount
+        }
+        const state = filterReducer(undefined, action)
+
+        expect(state.amount).toBe(amount);
+    })
+
+    //filter status
+    it('should filters status', () => {
+        const status = 'income';
+        const action = {
+            type: FILTER_STATUS,
+            status
+        }
+        const state = filterReducer(undefined, action)
+
+        expect(state.status).toBe(status);
+    })
+
 
 
 })

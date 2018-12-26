@@ -2,10 +2,10 @@ import { FILTER_DESCRIPTION, FILTER_CATEGORY, FILTER_AMOUNT, FILTER_STATUS } fro
 
 const filtersReducerDefaultState = {
     id: '',
-    date: '',
+    date: undefined,
     description: '',
     category: '',
-    amount: '',
+    amount: undefined,
     status: '',
 }
 
