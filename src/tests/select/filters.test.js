@@ -64,5 +64,37 @@ describe('Filter selector', () => {
         expect(result).toEqual([data[2]]);
     })
 
+    //filter category
+    it('filter category', () => {
+        const test = {
+            id: "",
+            date: undefined,
+            description: "",
+            category: "Cash",
+            currency: "",
+            amount: undefined,
+            status: ''
+        };
+        const result = filter(data, test);
+
+        expect(result).toEqual([data[0], data[2]]);
+    })
+
+    //filter status
+    it('filter status', () => {
+        const test = {
+            id: "",
+            date: undefined,
+            description: "",
+            category: "",
+            currency: "",
+            amount: undefined,
+            status: 'income'
+        };
+        const result = filter(data, test);
+
+        expect(result).toEqual([data[0], data[1]]);
+    })
+
 
 })
