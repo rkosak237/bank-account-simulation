@@ -14,15 +14,14 @@
 //login-page
 
 
-
-//dashboard
-@import './components/dashboard/d-page';
-@import './components/dashboard/summary';
-@import './components/dashboard/toggle';
-@import './components/dashboard/quick-payments';
-@import './components/dashboard/chart';
-@import './components/dashboard/products';
-@import './components/dashboard/history';
+//desktop
+@import './components/desktop/containers';
+@import './components/desktop/summary';
+@import './components/desktop/toggle';
+@import './components/desktop/quick-payments';
+@import './components/desktop/chart';
+@import './components/desktop/products';
+@import './components/desktop/history';
 
 //history
 @import './components/history/h-page';

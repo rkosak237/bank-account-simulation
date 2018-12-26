@@ -9,12 +9,13 @@ const LogIn = ({
         showErrors,
         handleChange,
         handleSubmit,
+        password
     }) => (
     <form className="LogIn__form">
             <Input
                 label={"E-mail"}
                 classes={"LogIn__input"}
-                name={"emailReceived"}
+                name={"email"}
                 minLength={6}
                 type={"email"}
                 onChange={handleChange}
@@ -23,11 +24,11 @@ const LogIn = ({
             <Input
                 label={"Password"}
                 classes={"LogIn__input"}
-                name={"passwordReceived"}
+                name={"password"}
                 minLength={6}
                 type={"password"}
                 onChange={handleChange}
-                value={email}
+                value={password}
                 />
         <div className="buttons-container">
             <button

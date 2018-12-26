@@ -10,8 +10,8 @@ constructor(props) {
      userNameInBase: false,
      showErrors: false,
      user: {
-       fullName: 'John Doe',
-       email: 'johndoe@gmail.com',
+       email: '',
+       password: ''
      },
      validationError: {
        invalidUser: false,
@@ -26,12 +26,10 @@ constructor(props) {
         } = this.state;
 
         e.preventDefault();
-        // const clearInvalidState = {
-        //     fullNameReceived: '',
-        //     emailReceived: '',
-        //     countryReceived: '',
-        //     checkboxReceived: false,
-        // }
+        const clearInvalidState = {
+            email: '',
+            password: ''
+        }
 
         if(this.validateInputs()) {
             if(this.checkDataWithState()) {
@@ -86,19 +84,19 @@ constructor(props) {
     }
 
     handleChange = (e) => {
-    //     const { userValidation } = this.state;
-    //     const target = e.target,
-    //         value = target.type === 'checkbox' ? target.checked : target.value,
-    //         name = target.name;
+        const { user } = this.state;
+        const target = e.target,
+            value = target.type === 'checkbox' ? target.checked : target.value,
+            name = target.name;
 
-    //         this.setState({
-    //         userValidation: {
-    //             ...userValidation,
-    //             [name]: value
-    //         }
-    //     })
+            this.setState({
+            user: {
+                ...user,
+                [name]: value
+            }
+        })
 
-    //   this.validateInputs(name);
+      // this.validateInputs(name);
     }
 
   render() {
@@ -106,12 +104,7 @@ constructor(props) {
       userNameInBase,
       showErrors
     } = this.state;
-    // const {
-    //   fullNameReceived,
-    //   emailReceived,
-    //   countryReceived,
-    //   checkboxReceived
-    // } = this.state.userValidation;
+
     const {
       validationError
     } = this.state;
@@ -121,6 +114,7 @@ constructor(props) {
         <section className="signUp__container">
           <LogIn
             email={this.state.user.mail}
+            password={this.state.user.password}
             handleSubmit={this.handleSubmit}
             handleChange={this.handleChange}
             userNameInBase={userNameInBase}

@@ -1,9 +1,8 @@
 //selectors
 
-export default (expenses, { description, category, amount, status, currency }) => {
+export default (expenses, { description, category, amount, status }) => {
     return expenses.filter(expense => {
 
-        console.log(expense);
         if(category  == 'Show all') {
             return category = '';
         } else {
