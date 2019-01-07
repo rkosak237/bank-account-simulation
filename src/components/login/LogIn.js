@@ -33,6 +33,7 @@ const LogIn = ({
         <div className="buttons-container">
             <button
             onClick={handleSubmit}
+            type="submit"
             className="btn">Log in</button>
             <button className="btn btn--bg-transparent">Forgoten password?</button>
         </div>

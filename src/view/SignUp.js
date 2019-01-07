@@ -21,9 +21,6 @@ constructor(props) {
 }
 
  handleSubmit = (e) => {
-        const {
-            userNameInBase,
-        } = this.state;
 
         e.preventDefault();
         const clearInvalidState = {
@@ -32,15 +29,8 @@ constructor(props) {
         }
 
         if(this.validateInputs()) {
-            if(this.checkDataWithState()) {
-                this.setState({
-                    showErrors: false,
-                    userNameInBase: !userNameInBase,
-                    userValidation: clearInvalidState
-                })
-            } else {
-                this.props.history.push("/desktop");
-            }
+            this.props.history.push("/desktop");
+
         } else {
             this.setState({
                 showErrors: true,
@@ -51,36 +41,37 @@ constructor(props) {
     }
 
     validateInputs = (name) => {
-        // const {
-        //     fullNameReceived,
-        //     emailReceived,
-        // } = this.state.userValidation;
-        // const { validationError } = this.state;
+        const {
+            email,
+            password,
+        } = this.state.user;
+        const { validationError } = this.state;
 
 
-        // //regexp
-        // const regexValidMail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-        //     regexFullName = /^[a-z]([-']?[a-z]+)*( [a-z]([-']?[a-z]+)*)+$/gi;
+        //regexp
+        const regexValidMail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-        // //fullname validation
-        // const fullNameLength = fullNameReceived.length >= 5,
-        //     itHasNameAndSurname = fullNameReceived.match(regexFullName),
 
         // //email vaildation
-        //     emailIsValid = emailReceived.match(regexValidMail);
+        const emailIsValid = email.match(regexValidMail);
 
-        // switch(name) {
-        //     case 'fullNameReceived':
-        //         validationError.invalidUser = fullNameLength || itHasNameAndSurname ? false : true;
-        //         break;
-        //     case 'emailReceived':
-        //         validationError.invalidEmail = emailIsValid  ? false : true;
-        //         break;
-        //     default:
-        //         break;
-        // }
+        //password validation
+        const passwordLength = password.length >= 5;
 
-        // return validationError.invalidUser & validationError.invalidEmail ? false : true;
+
+
+        switch(name) {
+          case 'email':
+              validationError.invalidEmail = emailIsValid  ? false : true;
+              break;
+            case 'password':
+                validationError.invalidUser = passwordLength ? false : true;
+                break;
+            default:
+                break;
+        }
+
+        return validationError.invalidUser & validationError.invalidEmail ? false : true;
     }
 
     handleChange = (e) => {
