@@ -7,8 +7,6 @@ constructor(props) {
   super(props);
 
    this.state = {
-     userNameInBase: false,
-     showErrors: false,
      user: {
        email: '',
        password: ''
@@ -53,19 +51,20 @@ constructor(props) {
 
 
         // //email vaildation
-        const emailIsValid = email.match(regexValidMail);
+        const emailIsValid = email.match(regexValidMail),
+        emailIsntEmpty = email.length != 0,
 
         //password validation
-        const passwordLength = password.length >= 5;
-
+        passwordLength = password.length >= 5,
+        passwordIsntEmpty = password.length != 0;
 
 
         switch(name) {
           case 'email':
-              validationError.invalidEmail = emailIsValid  ? false : true;
+            validationError.invalidEmail = emailIsValid & emailIsntEmpty ? false : true;
               break;
             case 'password':
-                validationError.invalidUser = passwordLength ? false : true;
+            validationError.invalidUser = passwordLength & passwordIsntEmpty? false : true;
                 break;
             default:
                 break;
@@ -87,7 +86,7 @@ constructor(props) {
             }
         })
 
-      // this.validateInputs(name);
+      this.validateInputs(name);
     }
 
   render() {

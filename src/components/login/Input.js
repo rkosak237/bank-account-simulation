@@ -15,13 +15,14 @@ const Input = ({
     <div className="LogIn__wrapper">
         <label className="LogIn__label">{label}</label>
         <input
-            className = {classes}
+            className={classes}
             name={name}
             placeholder={placeholder}
             type={type}
             onChange={onChange}
             value={fullName}
-            minLength={minLength} />
+            minLength={minLength}
+            required/>
             <span className="LogIn__error">blabla</span>
     </div>
 );

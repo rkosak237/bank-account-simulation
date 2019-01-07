@@ -11,12 +11,14 @@ const LogIn = ({
         handleSubmit,
         password
     }) => (
-    <form className="LogIn__form">
+    <form
+    className="LogIn__form"
+    onSubmit={handleSubmit}>
             <Input
                 label={"E-mail"}
                 classes={"LogIn__input"}
                 name={"email"}
-                minLength={6}
+                minLength={5}
                 type={"email"}
                 onChange={handleChange}
                 value={email}
@@ -25,14 +27,13 @@ const LogIn = ({
                 label={"Password"}
                 classes={"LogIn__input"}
                 name={"password"}
-                minLength={6}
+                minLength={5}
                 type={"password"}
                 onChange={handleChange}
                 value={password}
                 />
         <div className="buttons-container">
             <button
-            onClick={handleSubmit}
             type="submit"
             className="btn">Log in</button>
             <button className="btn btn--bg-transparent">Forgoten password?</button>
