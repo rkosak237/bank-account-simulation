@@ -1,0 +1,14 @@
+.history-grid {
+    display: flex;
+    flex-direction: column;
+    margin: $s-size 0 0 0;
+    @media (min-width: $tablet-landscape) {
+        justify-content: space-between;
+        margin: $s-size 0 0 0;
+        flex-direction: row;
+    }
+}
+
+.history__label {
+    margin-right: $s-size;
+}

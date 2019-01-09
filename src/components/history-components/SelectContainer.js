@@ -9,7 +9,7 @@ const SelectContainer = ({
         valueStatus
     }) => (
     <div className="inputs__element">
-        <label className="h-l__label" htmlFor="">Filter by</label>
+        <label className="history__label" htmlFor="">Filter by</label>
         <SelectCategory
             changeSelect={changeSelect}
             valueSelect={valueSelect}

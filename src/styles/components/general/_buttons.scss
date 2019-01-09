@@ -6,16 +6,13 @@
     letter-spacing: 2px;
     transition: .3s ease-in-out;
     width: 100%;
-
     @media (min-width: $tablet-landscape) {
         flex-direction: row;
         width: unset;
     }
-
     &:hover {
         background: $btn-hover-background;
     }
-
     &:focus {
         background: $btn-focus-bg;
         color: $btn-focus-font;
@@ -28,32 +25,19 @@
 }
 
 .payment__btn {
-    margin-left: $m-size;
-}
-
-.buttons-container {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    width: 100%;
+    display: none;
 
     @media (min-width: $tablet-landscape) {
+        display: inline-block;
+        margin-left: $m-size;
         flex-direction: row;
         width: auto;
     }
-
-    .btn {
-        margin: $s-size 0;
-
-        @media (min-width: $tablet-landscape) {
-            margin: 0 $m-size;
-        }
-    }
-
 }
+
+
 
 .btn--bg-transparent {
     background: none;
     color: $btn-forgotten-password;
-
 }

@@ -18,7 +18,9 @@ const Nav = () => (
                 <a className="nav__text" href="#">Analyse</a>
             </li>
             <li className="nav-list__item">
-                <a className="nav__text" href="#">Plan</a>
+                <NavLink className="nav__text" to="/plan" activeClassName="selected">
+                    Plan
+                </NavLink>
             </li>
             <li className="nav-list__item">
                 <NavLink className="nav__text" to="/transfer" activeClassName="selected">

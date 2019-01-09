@@ -1,5 +1,4 @@
 //general styles
-
 @import './base/settings';
 // @import './components/transitionGroup';
 @import './base/base';
@@ -9,12 +8,8 @@
 @import './components/general/nav';
 @import './components/general/footer';
 @import './components/general/listElement';
-
-
 //signup - login
 @import './components/signup/form';
-
-
 //desktop
 @import './components/desktop/containers';
 @import './components/desktop/summary';
@@ -23,12 +18,11 @@
 @import './components/desktop/chart';
 @import './components/desktop/products';
 @import './components/desktop/history';
-
 //history
-@import './components/history/h-page';
+@import './components/history/history';
+@import './components/history/list';
 @import './components/history/inputs';
 //transfer
 @import './components/transfer/t-page';
-
 //calendar
-
+@import './components/calendar/calendar';

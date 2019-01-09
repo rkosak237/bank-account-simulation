@@ -37,47 +37,58 @@ class History extends React.Component {
         .filter((item, index, array) => array.indexOf(item) === index);
 
         return (
-            <div>
-                <Header />
-                    <div className="main__container">
-                    <div className="h-l-grid main__grid">
-                        <h1 className="h-c__title">History</h1>
-                        <div className="h-l-inputs__container">
-                            <Search
-                                onChange={this.handleChangeSearch}
-                                value={filters.description}/>
-                            <SelectContainer
-                                changeSelect={this.handleChangeSelect}
-                                valueSelect={filters.category}
-                                changeStatus={this.handleChangeSelectStatus}
-                                valueStatus={filters.status}/>
+
+        <div>
+            <Header />
+            <div className="main__container">
+
+              <div className="history-grid main__grid">
+                <h1 className="history__title">History</h1>
+
+                <div className="inputs__container">
+                    <Search
+                    onChange={this.handleChangeSearch}
+                    value={filters.description} />
+
+                    <SelectContainer
+                    changeSelect={this.handleChangeSelect}
+                    valueSelect={filters.category}
+                    changeStatus={this.handleChangeSelectStatus}
+                    valueStatus={filters.status} />
+                </div>
+
+              </div>
+              <section className="list history__list">
+
+                <div className="list__titles">
+                    <p className="title">Date</p>
+                    <p className="title">Details</p>
+                    <p className="title">Category</p>
+                    <p className="title">Amount</p>
+                </div>
+
+                <div>
+                    <div className="list__container">
+
+                        <div>
+                        <ul className="list__transactions">
+                            {historyBills.map(bill => (
+                            <ListElement
+                                key={bill.id}
+                                array={filtered}
+                                {...bill}
+                            />
+                            ))}
+                        </ul>
                         </div>
-                    </div>
-                    <div className="h-l-grid--column">
-                        <div className="h-l__titles">
-                            <p className="title">Date</p>
-                            <p className="title">Details</p>
-                            <p className="title">Category</p>
-                            <p className="title">Amount</p>
-                        </div>
-                        <div className="h-l__list">
-                            <div className="history__wrapper">
-                            <div className="history__list">
-                                <ul className="list">
-                                    {historyBills.map(bill =>
-                                        <ListElement
-                                        key={bill.id}
-                                        array={filtered}
-                                        {...bill}
-                                    />)}
-                                </ul>
-                            </div>
-                        </div>
-                        </div>
+
                     </div>
                 </div>
+
+              </section>
             </div>
-    )
+          </div>
+        )
 }
 }
 const mapStateToProps = state => ({

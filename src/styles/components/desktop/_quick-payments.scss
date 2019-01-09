@@ -13,3 +13,22 @@
 .quick-payments__title {
     font-size: $xl-size;
 }
+
+.quick-payments__btns-container {
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    @media (min-width: $tablet-landscape) {
+        flex-direction: row;
+        width: auto;
+    }
+    .btn {
+        margin: $s-size 0;
+        @media (min-width: $tablet-landscape) {
+            margin: 0 $m-size;
+        }
+    }
+}
+

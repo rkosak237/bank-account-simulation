@@ -4,30 +4,38 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-
     @media (min-width: $tablet-landscape) {
         flex-direction: row;
     }
-
-}
-
-.summary__preview {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin: 0 0 $m-size 0;
-
-    @media (min-width: $tablet-landscape) {
-        width: 50%;
-        margin: 0 0 $s-size 0;
+    &__preview {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin: 0 0 $m-size 0;
+        flex-direction: column;
+        @media (min-width: $tablet) {
+            justify-content: space-between;
+            width: 60%;
+            margin: 0 0 $s-size 0;
+            flex-direction: row;
+            align-items: flex-start;
+        }
     }
-}
+    &__item {
+        align-items: center;
+        text-align: center;
+        margin: 0 0 2rem 0;
 
-.summary__analysis {
-    display: flex;
-}
-
-
-.preview__text {
-    font-size: $m-size*1.5;
+        @media (min-width: $tablet) {
+            margin: 0;
+            align-items: flex-start;
+            text-align: left;
+        }
+    }
+    &__analysis {
+        display: flex;
+    }
+    &__text {
+        font-size: $m-size*1.5;
+    }
 }

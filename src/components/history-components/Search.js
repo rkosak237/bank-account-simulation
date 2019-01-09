@@ -2,9 +2,9 @@ import * as React from 'react';
 
 const Search = ({onChange, value}) => (
     <div className="inputs__element search ">
-        <label className="h-l__label" htmlFor="">Search</label>
+        <label className="history__label" htmlFor="">Search</label>
         <input
-        className="h-l__search"
+        className="search__input"
         onChange={onChange}
         value={value}
         type="text"/>

@@ -21,21 +21,21 @@ constructor(props) {
         return (
             <div className="summary">
                 <div className="summary__preview">
-                    <div>
+                    <div className="summary__item">
                         <h2>Balance</h2>
-                        <span className="preview__text"> <b>
+                        <span className="summary__text"> <b>
                         {isLoading ? `Loading...` : balance}
                         </b> PLN</span>
                     </div>
-                    <div>
+                    <div className="summary__item">
                         <h2>Available funds</h2>
-                        <span className="preview__text"> <b>
+                        <span className="summary__text"> <b>
                         {isLoading ? `Loading...` : funds}
                         </b> PLN</span>
                     </div>
-                    <div>
+                    <div className="summary__item">
                         <h2>Scheduled payments</h2>
-                        <span className="preview__text"> <b>
+                        <span className="summary__text"> <b>
                         {isLoading ? `Loading...` : payments}
                         </b> PLN</span>
                         <Link to="/Transfer">

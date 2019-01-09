@@ -1,0 +1,31 @@
+.history__list {
+    flex-direction: column;
+    margin-bottom: $xl-size;
+    @extend .history-grid;
+    width: 90%;
+    @media (min-width: $tablet-landscape) {
+        width: 70%;
+    }
+}
+
+
+.list {
+
+    &__titles {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__container {
+        border: 1px solid $border-color;
+        border-radius: 10px;
+        height: 60vh;
+        overflow-y: scroll;
+    }
+
+    &__transactions {
+        list-style: none;
+        padding: 0;
+    }
+}

@@ -6,6 +6,7 @@ import Desktop from '../view/Desktop';
 import SignUp from '../view/SignUp';
 import History from '../view/History';
 import Transfer from '../view/Transfer';
+import Calendar from '../view/Calendar';
 
 const AppRouter = () => (
     <BrowserRouter>
@@ -14,6 +15,7 @@ const AppRouter = () => (
                 <Route path="/" exact={true} component={SignUp} />
                 <Route path="/desktop" exact={true} component={Desktop} />
                 <Route path="/history" exact={true} component={History} />
+                <Route path="/plan" exact={true} component={Calendar} />
                 <Route path="/transfer" exact={true} component={Transfer} />
             </Switch>
         </div>
