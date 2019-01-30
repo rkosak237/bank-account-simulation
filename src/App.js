@@ -17,8 +17,8 @@ const App = () => (
                 <AppRouter />
         </Provider>
 );
-setTimeout(() => {
-        console.log(store.getState());
-}, 5000);
+// setTimeout(() => {
+//         console.log(store.getState());
+// }, 5000);
 
 export default App;
