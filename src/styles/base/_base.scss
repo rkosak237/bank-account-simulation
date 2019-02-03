@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Alegreya');
+
 // Place dedicated for global styles
 html {
     font-size: 62.5%;
     background: $background-color;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: $font-color;
 }
 
@@ -11,12 +13,14 @@ body {
     font-size: 1.4rem;
 }
 
-html, body, #app, .router {
+html,
+body,
+#app,
+.router {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
-
 }
 
 h1 {

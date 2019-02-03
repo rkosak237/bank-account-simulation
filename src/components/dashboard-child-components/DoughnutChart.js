@@ -22,25 +22,6 @@ const data = {
     }]
 };
 
-// const updateChart = (bills) => {
-//     //add new labels
-
-//     //add income
-//     const income = bills.map(money => money.status == 'income' ? money.amount : 0);
-
-//     const incomeSum = income.reduce((a, b) => a + b, 0);
-
-//     //add outcome
-//     const outcome = bills.map(money => money.status == 'outcome' ? -money.amount : 0);
-
-//     //sum all
-//     const outcomeSum = outcome.reduce((a, b) => a + b, 0);
-
-//     //update
-//     data.datasets[0].data = [];
-//     data.datasets[0].data.push(incomeSum, outcomeSum);
-// }
-
 class DoughnutChart extends React.Component {
 
 

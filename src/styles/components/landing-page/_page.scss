@@ -1,0 +1,121 @@
+.lp-product {
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    position: relative;
+    &::after {
+        content: '';
+        height: 85%;
+        width: 142%;
+        position: absolute;
+        right: -54rem;
+        bottom: -56rem;
+        background: white;
+        transform: rotate(-33deg);
+    }
+    &__grid {
+        display: flex;
+        align-items: center;
+    }
+    &__title {
+        font-size: $xl-size;
+        color: #222;
+        margin: $m-size 0;
+        @media (min-width: $tablet) {
+            font-size: $xxl-size;
+        }
+        &--light {
+            color: #fff;
+        }
+    }
+    &__content {
+        width: 100%;
+        @media (min-width: $tablet-landscape) {
+            width: 50%;
+        }
+    }
+    &__text {
+        font: 2rem 'Noto Serif SC', serif;
+        width: 90%;
+        @media (min-width: $tablet) {
+            width: 90%;
+        }
+    }
+    &--gradient-bg {
+        background-image: linear-gradient(125deg, #34495e, #27ae60, #16a085, #f1c40f);
+        background-size: 400%;
+        animation: bg-animation__gradient 15s infinite;
+    }
+    &__buttons-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 10rem;
+        width: 100%;
+        @media (min-width: $tablet) {
+            flex-direction: row;
+            height: unset;
+            width: 33rem;
+        }
+    }
+}
+
+@keyframes bg-animation__gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.section-centered {
+    display: flex;
+    justify-content: center;
+}
+
+.lp-overview {
+    padding: $xxl-size 0;
+    &__grid {
+        @extend .lp-product__grid;
+        align-items: unset;
+        justify-content: center;
+        flex-direction: column;
+        @media (min-width: $tablet) {
+            flex-direction: row;
+        }
+    }
+    &__content {
+        width: 100%;
+        @media (min-width: $tablet) {
+            width: 30%;
+        }
+    }
+    &__text {
+        @extend .lp-product__text;
+    }
+}
+
+.lp-sample {
+    &__grid {
+        display: flex;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        height: 35rem;
+        padding: 0 $xxl-size;
+
+    }
+    &__text {
+
+    }
+}

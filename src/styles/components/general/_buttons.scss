@@ -1,12 +1,13 @@
 .btn {
     border: none;
+    cursor: pointer;
     padding: $s-size $l-size;
     font-weight: 600;
     font-size: $m-size;
     letter-spacing: 2px;
     transition: .3s ease-in-out;
     width: 100%;
-    @media (min-width: $tablet-landscape) {
+    @media (min-width: $tablet) {
         flex-direction: row;
         width: unset;
     }
