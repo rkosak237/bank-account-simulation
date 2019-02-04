@@ -11,7 +11,6 @@ class LandingPage extends React.Component {
     render() {
 
         return <div>
-            {/* <Header /> */}
             <div className="main__container">
                 <section className="lp-product lp-product--gradient-bg section-centered">
                 <div className="main__grid lp-product__grid">
@@ -37,7 +36,7 @@ class LandingPage extends React.Component {
                 <div className="main__grid lp-overview__grid">
                   <div className="lp-overview__content">
                     <h2>Value #1 🚀 </h2>
-                    <p class="lp-overview__text">
+                  <p className="lp-overview__text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing
                       elit, sed do eiusmod tempor incididunt ut labore
                       et dolore magna aliqua. Ut enim ad minim veniam,
@@ -74,35 +73,40 @@ class LandingPage extends React.Component {
                 </div>
               </section>
 
-              <section className="lp-sample">
-                <div className="lp-sample__grid">
-                    <div className="lp-sample__content">
-                        <h2>Lore ipsum</h2>
-                        <p className="lp-sample__text">
+              <section className="lp-version">
+                <div className="lp-version__grid">
+                <div className="lp-version__content content--dark">
+                        <h2>Enterprise 🏦</h2>
+                        <p className="lp-version__text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat. Duis aute irure
-                            dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur.
+                            et dolore magna aliqua.
                         </p>
                         <button className="btn">check</button>
                     </div>
-                    <div className="lp-sample__content">
-                        <h2>Lore ipsum</h2>
-                        <p className="lp-sample__text">
+                <div className="lp-version__content content--light">
+                        <h2>Individual ☕️</h2>
+                        <p className="lp-version__text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat. Duis aute irure
-                            dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur.
+                            et dolore magna aliqua.
                         </p>
                         <button className="btn">check</button>
                     </div>
 
+                </div>
+              </section>
+
+              <section className="lp-newsletter">
+                <div className="lp-newsletter__grid">
+                  <div className="lp-newsletter__content">
+                  <h2 className="lp-newsletter__title">Newsletter</h2>
+
+                  <form className="lp-newsletter__form" action="">
+                      <input className="lp-newsletter__input" type="text"/>
+                      <button className="btn lp-newsletter__form-btn">Send</button>
+                    </form>
+                  </div>
                 </div>
               </section>
             </div>
