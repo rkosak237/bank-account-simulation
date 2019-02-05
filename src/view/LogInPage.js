@@ -2,7 +2,7 @@ import * as React from 'react';
 import { withRouter } from "react-router-dom";
 import LogIn from '../components/login/LogIn';
 
-class SignUp extends React.Component {
+class LogInPage extends React.Component {
 constructor(props) {
   super(props);
 
@@ -117,4 +117,4 @@ constructor(props) {
     )
   }
 }
-export default withRouter(SignUp);
+export default withRouter(LogInPage);

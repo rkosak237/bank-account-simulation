@@ -27,6 +27,7 @@
 
 .payment__btn {
     display: none;
+
     @media (min-width: $tablet-landscape) {
         display: inline-block;
         margin-left: $m-size;

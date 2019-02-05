@@ -4,17 +4,19 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Header from '../components/global/Header';
 import LandingPage from '../view/LandingPage';
 import Desktop from '../view/Desktop';
-import SignUp from '../view/SignUp';
+import LogInPage from "../view/LogInPage";
 import History from '../view/History';
 import Transfer from '../view/Transfer';
 import Calendar from '../view/Calendar';
+import RegiesterPage from '../view/RegiesterPage';
 
 const AppRouter = () => (
   <BrowserRouter>
     <div className="router">
       <Switch location={location}>
         <Route path="/" exact={true} component={LandingPage} />
-        <Route path="/login" exact={true} component={SignUp} />
+        <Route path="/login" exact={true} component={LogInPage} />
+        <Route path="/regiester" exact={true} component={RegiesterPage} />
         <Route path="/desktop" exact={true} component={Desktop} />
         <Route path="/history" exact={true} component={History} />
         <Route path="/plan" exact={true} component={Calendar} />

@@ -8,12 +8,14 @@ class Summary extends React.Component {
 constructor(props) {
     super(props);
     this.state = {
-        isLoading: false
+        isLoading: false,
+
     }
 }
     componentDidMount() {
         this.props.fetchSummary();
     }
+
 
     render() {
         const { isLoading } = this.state;
@@ -38,14 +40,16 @@ constructor(props) {
                         <span className="summary__text"> <b>
                         {isLoading ? `Loading...` : payments}
                         </b> PLN</span>
-                        <Link to="/Transfer">
+                        <Link to="/transfer">
                             <button className="btn payment__btn">FAST PAY</button>
                         </Link>
                     </div>
                 </div>
                 <div className="summary__analysis">
                     <div className="toggle">
-                        <input type="checkbox" />
+                        <input
+                            onClick={this.props.changeChart}
+                        type="checkbox" />
                         <span className="toggle__btn"></span>
                         <span className="toggle__label"></span>
                         <span className="toggle__bg"></span>

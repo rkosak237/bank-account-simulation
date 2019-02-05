@@ -11,9 +11,16 @@ class Desktop extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            info: true
-        }
+          showLineChart: true
+        };
     }
+
+    onClick = () => {
+        this.setState(prevState => ({
+            showLineChart: !prevState.showLineChart
+        }));
+    }
+
     render() {
 
         return (
@@ -22,11 +29,13 @@ class Desktop extends React.Component {
             <div className="main__container">
                 <div className="main__grid">
                     <QuickPayments/>
-                    <Summary />
+                    <Summary
+                        changeChart={this.onClick}
+                    />
                     {
-                    this.state.info ?
-                    <DoughnutChart /> :
-                    <LineChart />
+                    this.state.showLineChart ?
+                        <LineChart /> :
+                        <DoughnutChart />
                     }
                     <section className="desktop__content">
                         <Products />

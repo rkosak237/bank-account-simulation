@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Header from '../components/global/Header';
+import { Link } from "react-router-dom";
 
 class LandingPage extends React.Component {
     constructor(props) {
@@ -10,33 +11,42 @@ class LandingPage extends React.Component {
     }
     render() {
 
-        return <div>
+        return (
+          <div>
             <div className="main__container">
-                <section className="lp-product lp-product--gradient-bg section-centered">
+              <section className="lp-product lp-product--gradient-bg section-centered">
                 <div className="main__grid lp-product__grid">
                   <div className="lp-product__content">
-                    <h1 className="lp-product__title
-                            lp-product__title--light">
+                    <h1
+                      className="lp-product__title
+                            lp-product__title--light"
+                    >
                       As right as rain
                     </h1>
                     <p className="lp-product__text">
-                                New banking experience in your smartphone. Track your costs on charts, check your current balance, send transfer by 4 clicks. <br /> Simple - thats how it should be. 👍
+                      New banking experience in your smartphone. Track
+                      your costs on charts, check your current balance,
+                      send transfer by 4 clicks. <br /> Simple - thats
+                      how it should be. 👍
                     </p>
 
                     <div className="lp-product__buttons-container">
-                      <button className="btn">Login</button>
-                      <button className="btn">Regiester</button>
+                      <Link to="/login">
+                        <button className="btn">Login</button>
+                      </Link>
+                      <Link to="/regiester">
+                        <button className="btn">Regiester</button>
+                      </Link>
                     </div>
                   </div>
                 </div>
-
               </section>
 
               <section className="lp-overview section-centered">
                 <div className="main__grid lp-overview__grid">
                   <div className="lp-overview__content">
                     <h2>Value #1 🚀 </h2>
-                  <p className="lp-overview__text">
+                    <p className="lp-overview__text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing
                       elit, sed do eiusmod tempor incididunt ut labore
                       et dolore magna aliqua. Ut enim ad minim veniam,
@@ -75,42 +85,47 @@ class LandingPage extends React.Component {
 
               <section className="lp-version">
                 <div className="lp-version__grid">
-                <div className="lp-version__content content--dark">
-                        <h2>Enterprise 🏦</h2>
-                        <p className="lp-version__text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua.
-                        </p>
-                        <button className="btn">check</button>
-                    </div>
-                <div className="lp-version__content content--light">
-                        <h2>Individual ☕️</h2>
-                        <p className="lp-version__text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua.
-                        </p>
-                        <button className="btn">check</button>
-                    </div>
-
+                  <div className="lp-version__content content--dark">
+                    <h2>Enterprise 🏦</h2>
+                    <p className="lp-version__text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit, sed do eiusmod tempor incididunt ut labore
+                      et dolore magna aliqua.
+                    </p>
+                    <button className="btn">check</button>
+                  </div>
+                  <div className="lp-version__content content--light">
+                    <h2>Individual ☕️</h2>
+                    <p className="lp-version__text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit, sed do eiusmod tempor incididunt ut labore
+                      et dolore magna aliqua.
+                    </p>
+                    <button className="btn">check</button>
+                  </div>
                 </div>
               </section>
 
               <section className="lp-newsletter">
                 <div className="lp-newsletter__grid">
                   <div className="lp-newsletter__content">
-                  <h2 className="lp-newsletter__title">Newsletter</h2>
+                    <h2 className="lp-newsletter__title">Newsletter</h2>
 
-                  <form className="lp-newsletter__form" action="">
-                      <input className="lp-newsletter__input" type="text"/>
-                      <button className="btn lp-newsletter__form-btn">Send</button>
+                    <form className="lp-newsletter__form" action="">
+                      <input
+                        className="lp-newsletter__input"
+                        type="text"
+                      />
+                      <button className="btn lp-newsletter__form-btn">
+                        Send
+                      </button>
                     </form>
                   </div>
                 </div>
               </section>
             </div>
-          </div>;
+          </div>
+        );
     }
 }
 
