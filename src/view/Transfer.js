@@ -6,7 +6,7 @@ const Transfer = () => (
         <Header />
         <div className="main__container">
                 <section className="transfer-card">
-                    <div className="transfer-card__wrapper">
+                    <div className="transfer-card__grid">
                         <span className="previous-page">Arrow</span>
                         <div className="transfer__select-container">
                         </div>

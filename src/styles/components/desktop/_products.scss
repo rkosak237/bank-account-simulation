@@ -7,12 +7,12 @@
 .products__single-product {
     box-sizing: border-box;
     cursor: pointer;
-    color: $font-color;
+    color: themeColor(font-color);
     padding: 0 $m-size;
     height: $xxl-size*1.1;
     width: 100%;
     margin: 0 0 $m-size 0;
-    border: 1px solid $input-color;
+    border: 1px solid themeColor(input-color);
     border-radius: 10px;
     display: flex;
     justify-content: space-around;
@@ -22,17 +22,14 @@
     @media (min-width: $tablet) {
         width: 47%;
     }
-
 }
-
 
 .single-product__icon {
     width: 80px;
     height: 80px;
-
     svg {
         &:hover {
-            fill:grey;
+            fill: themeColor(inactive-icon);
         }
     }
 }
@@ -40,21 +37,19 @@
 .products__single-product {
     &:focus {
         .single-product__icon {
-
             svg {
-                    fill: grey;
+                fill: themeColor(inactive-icon);
             }
         }
     }
     &:hover {
         .single-product__icon {
             svg {
-                fill: grey;
+                fill: themeColor(inactive-icon);
             }
         }
     }
 }
-
 
 .single-product__description {
     width: 50%;

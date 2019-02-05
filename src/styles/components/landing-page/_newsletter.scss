@@ -1,0 +1,37 @@
+.lp-newsletter {
+    height: 100%;
+    width: 100%;
+    &__grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__content {
+        width: 70rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15rem 0;
+    }
+    &__title {
+        font-size: $xl-size;
+        text-align: center;
+    }
+    &__form {
+        height: $l-size;
+        width: 80%;
+    }
+    &__input {
+        border: 1px solid themeColor(input-color);
+        height: inherit;
+        padding: 0 $s-size;
+        width: 80%;
+        border-right: 0px;
+    }
+    &__form-btn {
+        height: inherit;
+        padding: 0;
+        width: 20%;
+    }
+}

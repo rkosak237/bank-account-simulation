@@ -1,7 +1,7 @@
 .sidebarHistory {
 
     &__wrapper {
-        border: 1px solid $input-color;
+        border: 1px solid themeColor(input-color);
         border-radius: 10px;
         overflow-y: scroll;
         height: 30rem;

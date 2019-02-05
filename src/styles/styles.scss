@@ -2,6 +2,7 @@
 @import './base/settings';
 // @import './components/transitionGroup';
 @import './base/base';
+@import './base/functions';
 @import './base/media-queries';
 @import './components/general/buttons';
 @import './components/general/header';
@@ -10,7 +11,10 @@
 @import './components/general/listElement';
 
 //landing-page
-@import './components/landing-page/page';
+@import './components/landing-page/product';
+@import './components/landing-page/overview';
+@import './components/landing-page/version';
+@import './components/landing-page/newsletter';
 
 //signup - login
 @import './components/signup/form';
@@ -22,7 +26,7 @@
 @import './components/desktop/quick-payments';
 @import './components/desktop/chart';
 @import './components/desktop/products';
-@import './components/desktop/history';
+@import './components/desktop/sidebarHistory';
 
 //history
 @import './components/history/history';

@@ -162,7 +162,7 @@
         width: 80%;
     }
     &__input {
-        border: 1px solid $input-color;
+        border: 1px solid themeColor(input-color);
         height: inherit;
         padding: 0 $s-size;
         width: 80%;

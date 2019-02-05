@@ -8,36 +8,42 @@
 
 
 //Main theme
-$background-color: #fff;
-$font-color: #202020;
-$input-color: #929090;
-$border-color: #929090;
-
-//section colors
-$h1-color: #000;
-
-//underline
-$underline-color: #929090;
-
-//accents
-$blue-accent: #0076FF;
+$theme-colors: (
+    bg-color: #fff,
+    h1-color: #000,
+    font-color: #202020,
+    input-color: #929090,
+    border-color: #0c0b0b,
+    blue-accent: #0076FF,
+    grey: #808080,
+    light-font: #fff,
+    inactive-icon: #808080,
+    underline-color: #929090,
+);
 
 //modifires
-$income: #27ae60;
-$outcome: #e74c3c;
+$modifiers: (
+    income: #27ae60,
+    outcome: #e74c3c,
+    error: #e74c3c,
+    valid: #27ae60,
+);
 
 //btn colors
-$btn-hamburger: #000;
-$btn-focus-font: #fff;
-$btn-focus-bg: #0076FF;
-$btn-background: #0076FF;
-$btn-forgotten-password: #0076FF;
-$btn-text: #fff;
-$btn-hover-background: lighten($blue-accent, 40%);;
-$btn-hover-text: #fff;
-$btn-disabled: #635e5e;
+$btn-colors: (
+    blue-accent: #0076FF,
+    hamburger: #000,
+    focus-font: #fff,
+    focus-bg: #0076FF,
+    background: #0076FF,
+    forgotten-password: #0076FF,
+    text: #fff,
+    hover-background: lighten(#0076FF, 40%),
+    hover-text: #fff,
+    disabled: #635e5e,
+);
 
-//Spacing
+//Spacing - sizes
 $s-size: 1.2rem;
 $m-size: 1.6rem;
 $l-size: 3.2rem;

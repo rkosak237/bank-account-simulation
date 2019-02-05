@@ -6,10 +6,7 @@
     align-items: center;
 }
 
-.main__grid {
-    width: 90%;
-
-}
+.main__grid {width: 90%;}
 
 
 .desktop__content {
@@ -20,15 +17,11 @@
     margin-bottom: $xl-size;
     height: auto;
 
-    @media (min-width: $tablet-landscape) {
-        flex-direction: row;
-    }
+    @media (min-width: $tablet-landscape) {flex-direction: row;}
 }
 
 .content__sidebar {
     width: 100%;
 
-    @media (min-width: $tablet-landscape) {
-        width:48%;
-    }
+    @media (min-width: $tablet-landscape) {width:48%;}
 }

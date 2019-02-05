@@ -12,22 +12,21 @@
         width: unset;
     }
     &:hover {
-        background: $btn-hover-background;
+        background: btnColor(hover-background);
     }
     &:focus {
-        background: $btn-focus-bg;
-        color: $btn-focus-font;
+        background: btnColor(focus-bg);
+        color: btnColor(focus-font);
     }
 }
 
 .btn:disabled {
-    background: $btn-disabled;
+    background: btnColor(btn-disabled);
     transition: .3 ease-in-out;
 }
 
 .payment__btn {
     display: none;
-
     @media (min-width: $tablet-landscape) {
         display: inline-block;
         margin-left: $m-size;
@@ -36,9 +35,7 @@
     }
 }
 
-
-
 .btn--bg-transparent {
     background: none;
-    color: $btn-forgotten-password;
+    color: btnColor(forgotten-password);
 }

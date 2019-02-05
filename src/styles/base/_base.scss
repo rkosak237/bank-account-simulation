@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 @import url('https://fonts.googleapis.com/css?family=Alegreya');
-
 // Place dedicated for global styles
 html {
     font-size: 62.5%;
-    background: $background-color;
+    background: themeColor(background-color);
     font-family: 'Montserrat', sans-serif;
-    color: $font-color;
+    color: themeColor(font-color);
 }
 
 body {
@@ -26,9 +25,9 @@ body,
 h1 {
     font-size: 24px;
     font-size: $l-size;
-    color: $font-color;
+    color: themeColor(font-color);
 }
 
-*  {
+* {
     box-sizing: border-box;
 }

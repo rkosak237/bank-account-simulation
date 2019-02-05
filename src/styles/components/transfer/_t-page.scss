@@ -6,7 +6,7 @@
     box-shadow: 0 37.125px 70px -12.125px rgba(0, 0, 0, 0.3);
 }
 
-.transfer-card__wrapper {
+.transfer-card__grid {
     padding: $s-size;
 }
 .previous-page {
@@ -17,7 +17,7 @@
 
 .transfer__select-container {
     height: $l-size;
-    border: 1px solid $border-color;
+    border: 1px solid themeColor(border-color);
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
@@ -41,7 +41,7 @@
     content: '';
     height: $l-size;
     width: $l-size;
-    background: grey;
+    background: themeColor(grey);
     margin-right: $s-size;
 }
 
@@ -75,7 +75,7 @@
 
 .recipent__input {
     border-radius: 5px;
-    border: 1px solid grey;
+    border: 1px solid themeColor(grey);
     height: $m-size*1.5;
     width: 100%;
 }

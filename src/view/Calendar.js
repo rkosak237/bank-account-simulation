@@ -1,6 +1,4 @@
 import * as React from 'react';
-
-import uuid from 'uuid';
 import Header from '../components/global/Header';
 
 class Calendar extends React.Component {

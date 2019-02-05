@@ -3,6 +3,7 @@
     margin-bottom: $xl-size;
     @extend .history-grid;
     width: 90%;
+
     @media (min-width: $tablet-landscape) {
         width: 70%;
     }
@@ -18,7 +19,7 @@
     }
 
     &__container {
-        border: 1px solid $border-color;
+        border: 1px solid themeColor(border-color);
         border-radius: 10px;
         height: 60vh;
         overflow-y: scroll;

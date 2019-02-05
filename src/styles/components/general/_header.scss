@@ -1,5 +1,5 @@
 .header {
-    background: $background-color;
+    background: themeColor(background-color);
     -webkit-box-shadow: 2px 1px 25px -6px rgba(0, 0, 0, 0.65);
     -moz-box-shadow: 2px 1px 25px -6px rgba(0, 0, 0, 0.65);
     box-shadow: 2px 1px 25px -6px rgba(0, 0, 0, 0.65);
@@ -14,7 +14,6 @@
 .header__container {
     height: 100%;
     width: 100%;
-
     @media (min-width: $tablet-landscape) {
         width: 90%;
     }
@@ -33,16 +32,17 @@
 .header__logo {
     height: $xxl-size;
     width: $xxl-size;
-    color: white;
-    background: grey;
+    color: themeColor(light-font);
+    background: themeColor(grey);
 }
 
 .account__profile-img {
     height: $xxl-size;
     width: $xxl-size;
-    background: grey;
-    color: white;
+    background: themeColor(grey);
+    color: themeColor(light-font);
 }
+
 .account__user {
     display: flex;
     flex-direction: column;
@@ -54,7 +54,6 @@
     display: flex;
     justify-content: space-around;
 }
-
 
 .header__logout {
     display: flex;
