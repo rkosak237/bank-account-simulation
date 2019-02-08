@@ -1,12 +1,12 @@
 import * as React from 'react';
-import ListElement from '../components/dashboard-child-components/ListELement';
+import ListElement from '../components/dashboard-child-components/ListElement';
 import uuid from 'uuid';
 import { connect } from 'react-redux';
 import filterExpenses  from '../selectors/filters';
 import { filterCategory, filterDescription, filterStatus } from '../actions/filters';
 import Search from '../components/history-components/Search';
 import SelectContainer from '../components/history-components/SelectContainer';
-import Header from '../components/global/Header';
+import Header from "../components/header/Header";
 
 class History extends React.Component {
 

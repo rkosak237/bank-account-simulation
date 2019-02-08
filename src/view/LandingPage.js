@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Header from '../components/global/Header';
 import { Link } from "react-router-dom";
+import Button from '../components/global/Button';
 
 class LandingPage extends React.Component {
     constructor(props) {
@@ -17,10 +17,7 @@ class LandingPage extends React.Component {
               <section className="lp-product lp-product--gradient-bg section-centered">
                 <div className="main__grid lp-product__grid">
                   <div className="lp-product__content">
-                    <h1
-                      className="lp-product__title
-                            lp-product__title--light"
-                    >
+                    <h1 className="lp-product__title lp-product__title--light">
                       As right as rain
                     </h1>
                     <p className="lp-product__text">
@@ -32,10 +29,10 @@ class LandingPage extends React.Component {
 
                     <div className="lp-product__buttons-container">
                       <Link to="/login">
-                        <button className="btn">Login</button>
+                        <Button text={"Login"} />
                       </Link>
                       <Link to="/regiester">
-                        <button className="btn">Regiester</button>
+                        <Button text={"Regiester"} />
                       </Link>
                     </div>
                   </div>
@@ -92,7 +89,7 @@ class LandingPage extends React.Component {
                       elit, sed do eiusmod tempor incididunt ut labore
                       et dolore magna aliqua.
                     </p>
-                    <button className="btn">check</button>
+                    <Button text={"check"} />
                   </div>
                   <div className="lp-version__content content--light">
                     <h2>Individual ☕️</h2>
@@ -101,7 +98,7 @@ class LandingPage extends React.Component {
                       elit, sed do eiusmod tempor incididunt ut labore
                       et dolore magna aliqua.
                     </p>
-                    <button className="btn">check</button>
+                    <Button text={"check"} />
                   </div>
                 </div>
               </section>
@@ -116,9 +113,10 @@ class LandingPage extends React.Component {
                         className="lp-newsletter__input"
                         type="text"
                       />
-                      <button className="btn lp-newsletter__form-btn">
-                        Send
-                      </button>
+                      <Button
+                        classname={"btn lp-newsletter__form-btn"}
+                        text={"send"}
+                      />
                     </form>
                   </div>
                 </div>

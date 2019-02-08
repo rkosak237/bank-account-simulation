@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const SelectStatus = ({ changeStatus, valueStatus }) => (
+export default ({ changeStatus, valueStatus }) => (
   <select
     className="history__filter select-status"
     onChange={changeStatus}
@@ -11,4 +11,3 @@ const SelectStatus = ({ changeStatus, valueStatus }) => (
     <option value="Outcome">Outcome</option>
   </select>
 );
-export default SelectStatus;

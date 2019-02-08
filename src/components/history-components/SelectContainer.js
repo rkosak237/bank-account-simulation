@@ -2,7 +2,7 @@ import * as React from 'react';
 import SelectCategory from './SelectCategory';
 import SelectStatus from './SelectStatus';
 
-const SelectContainer = ({
+export default ({
         changeSelect,
         valueSelect,
         changeStatus,
@@ -20,4 +20,3 @@ const SelectContainer = ({
         />
     </div>
 );
-export default SelectContainer;

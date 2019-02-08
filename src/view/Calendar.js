@@ -1,9 +1,7 @@
 import * as React from 'react';
-import Header from '../components/global/Header';
+import Header from "../components/header/Header";
 
 class Calendar extends React.Component {
-
-
 
     render() {
         return (

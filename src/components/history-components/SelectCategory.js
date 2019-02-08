@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const SelectCategory = ({ changeSelect, valueSelect }) => (
+export default ({ changeSelect, valueSelect }) => (
   <select
     className="history__filter"
     onChange={changeSelect}
@@ -12,4 +12,3 @@ const SelectCategory = ({ changeSelect, valueSelect }) => (
     <option value="Cash">Cash</option>
   </select>
 );
-export default SelectCategory;

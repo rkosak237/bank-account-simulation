@@ -23,8 +23,6 @@ const data = {
 };
 
 class DoughnutChart extends React.Component {
-
-
     componentDidMount() {
         this.props.fetchHistory();
     }

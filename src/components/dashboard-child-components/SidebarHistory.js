@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ListElement from './ListELement';
+import ListElement from './ListElement';
 import { connect } from 'react-redux';
 import { fetchHistory } from '../../actions/fetchActions';
 import Proptypes from 'prop-types';

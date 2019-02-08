@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import Header from '../components/global/Header';
+// import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import LandingPage from '../view/LandingPage';
 import Desktop from '../view/Desktop';
 import LogInPage from "../view/LogInPage";

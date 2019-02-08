@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const Search = ({onChange, value}) => (
+export default ({onChange, value}) => (
     <div className="inputs__element search ">
         <label className="history__label" htmlFor="">Search</label>
         <input
@@ -10,4 +10,3 @@ const Search = ({onChange, value}) => (
         type="text"/>
     </div>
 );
-export default Search;

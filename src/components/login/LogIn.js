@@ -1,12 +1,8 @@
 import * as React from 'react';
 import Input from './Input';
 
-const LogIn = ({
-        form,
+export default ({
         email,
-        userNameInBase,
-        validationError,
-        showErrors,
         handleChange,
         handleSubmit,
         password
@@ -40,5 +36,3 @@ const LogIn = ({
         </div>
     </form>
 );
-
-export default LogIn;
