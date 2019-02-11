@@ -1,6 +1,8 @@
 import * as React from 'react';
-import { withRouter } from "react-router-dom";
 import LogIn from '../components/login/LogIn';
+import { connect } from "react-redux";
+import { Redirect } from 'react-router-dom';
+import { logIn } from '../actions/auth';
 
 class LogInPage extends React.Component {
 constructor(props) {
@@ -19,25 +21,28 @@ constructor(props) {
 }
 
  handleSubmit = (e) => {
+   const { authError, authorization } = this.props;
+    e.preventDefault();
 
-        e.preventDefault();
-        const clearInvalidState = {
-            email: '',
-            password: ''
-        }
+    const clearInvalidState = {
+      email: '',
+      password: ''
+    }
 
-        if(this.validateInputs()) {
-            this.props.history.push("/desktop");
-
-        } else {
-            this.setState({
-                showErrors: true,
-                userValidation: clearInvalidState
-            })
-        }
+   this.props.logIn(this.state.user);
+   if (authError) {
+    //  this.props.history.push("/desktop");
+   } else {
+     this.setState({
+       showErrors: true,
+       userValidation: clearInvalidState
+     });
+   }
 
     }
 
+
+//move validation to separate file
     validateInputs = (name) => {
         const {
             email,
@@ -75,6 +80,7 @@ constructor(props) {
 
     handleChange = (e) => {
         const { user } = this.state;
+
         const target = e.target,
             value = target.type === 'checkbox' ? target.checked : target.value,
             name = target.name;
@@ -91,24 +97,21 @@ constructor(props) {
 
   render() {
     const {
-      userNameInBase,
       showErrors
     } = this.state;
-
-    const {
-      validationError
-    } = this.state;
+    const { auth } = this.props;
+    if(auth.uid) return <Redirect to="/desktop" />
 
      return (
-      <div className="main__container signUp">
+       <div className="main__container fade-in signUp">
         <section className="signUp__container">
           <LogIn
             email={this.state.user.mail}
             password={this.state.user.password}
             handleSubmit={this.handleSubmit}
             handleChange={this.handleChange}
-            userNameInBase={userNameInBase}
-            validationError={validationError}
+            // userNameInBase={userNameInBase}
+            // validationError={validationError}
             showErrors={showErrors}
             form={"signUp"}
           />
@@ -117,4 +120,17 @@ constructor(props) {
     )
   }
 }
-export default withRouter(LogInPage);
+
+const mapStateToProps = (state) => {
+  return {
+    authError: state.auth.authError,
+    auth: state.firebase.auth
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  { logIn }
+)(LogInPage);
+
+// ) (withRouter(LogInPage));

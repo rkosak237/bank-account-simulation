@@ -1,11 +1,16 @@
 import * as React from "react";
-const btnClass = 'btn';
 
 const exampleData = {
     btnClass: 'btn',
-    text: 'Pass text to props'
+    text: 'Pass text to props',
 }
 
-export default ({ classname = btnClass, text = text}) => (
-  <button className={classname}>{text}</button>
+export default ({
+  classname = exampleData.btnClass,
+  text = exampleData.text,
+  event
+}) => (
+  <button onClick={event} className={classname}>
+    {text}
+  </button>
 );

@@ -18,7 +18,7 @@ const AppRouter = () => (
         <Route path="/regiester" exact={true} component={RegiesterPage} />
         <Route path="/desktop" exact={true} component={Desktop} />
         <Route path="/history" exact={true} component={History} />
-        <Route path="/plan" exact={true} component={Calendar} />
+        <Route path="/calendar" exact={true} component={Calendar} />
         <Route path="/transfer" exact={true} component={Transfer} />
       </Switch>
     </div>

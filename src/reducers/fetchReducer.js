@@ -3,7 +3,8 @@ import { FETCH_PRODUCTS, FETCH_HISTORY, FETCH_SUMMARY } from '../actions/types';
 const initialState = {
     itemsHistory: [],
     itemsProducts: [],
-    itemsSummary: {}
+    itemsSummary: {},
+    isFetching: false,
 }
 
 export default (state = initialState, action) => {

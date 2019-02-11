@@ -1,12 +1,20 @@
 import * as React from 'react';
+
+//components
+import Header from "../components/header/Header";
 import ListElement from '../components/dashboard-child-components/ListElement';
-import uuid from 'uuid';
-import { connect } from 'react-redux';
-import filterExpenses  from '../selectors/filters';
-import { filterCategory, filterDescription, filterStatus } from '../actions/filters';
 import Search from '../components/history-components/Search';
 import SelectContainer from '../components/history-components/SelectContainer';
-import Header from "../components/header/Header";
+
+//selector
+import filterExpenses  from '../selectors/filters';
+
+//redux
+import { connect } from 'react-redux';
+import { filterCategory, filterDescription, filterStatus } from '../actions/filters';
+
+//router
+import { Redirect } from "react-router-dom";
 
 class History extends React.Component {
 
@@ -30,17 +38,19 @@ class History extends React.Component {
 
 
     render() {
-        const { filters } = this.props;
+        const { filters, auth } = this.props;
         const historyBills = this.props.fetchItems;
         const filtered = historyBills
         .map(item => item.category)
         .filter((item, index, array) => array.indexOf(item) === index);
 
+        if (!auth.uid) return <Redirect to="/" />
+
         return (
 
         <div>
             <Header />
-            <div className="main__container">
+            <div className="main__container fade-in">
 
               <div className="history-grid main__grid">
                 <h1 className="history__title">History</h1>
@@ -93,7 +103,8 @@ class History extends React.Component {
 }
 const mapStateToProps = state => ({
     fetchItems: filterExpenses(state.fetchItems.itemsHistory, state.filters),
-    filters: state.filters
+    filters: state.filters,
+    auth: state.firebase.auth
 })
 
 

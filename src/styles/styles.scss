@@ -4,6 +4,8 @@
 @import './base/base';
 @import './base/functions';
 @import './base/media-queries';
+
+//general
 @import './components/general/buttons';
 @import './components/general/header';
 @import './components/general/nav';
@@ -38,3 +40,6 @@
 
 //calendar
 @import './components/calendar/calendar';
+
+
+@import './base/animations';

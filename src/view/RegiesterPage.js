@@ -29,7 +29,7 @@ constructor(props) {
     } = this.state;
 
      return (
-      <div className="main__container signUp">
+      <div className="main__container fade-in signUp">
         <section className="signUp__container">
          <h1>Regiester Page</h1>
         </section>

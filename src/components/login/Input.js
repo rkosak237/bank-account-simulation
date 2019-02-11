@@ -9,7 +9,8 @@ const Input = ({
         onChange,
         fullName,
         minLength = 2,
-        label
+        label,
+        autocomplete
     }) => (
     <div className="LogIn__wrapper">
         <label className="LogIn__label">{label}</label>
@@ -21,6 +22,7 @@ const Input = ({
             onChange={onChange}
             value={fullName}
             minLength={minLength}
+            autoComplete={autocomplete}
             required/>
             <span className="LogIn__error">blabla</span>
     </div>

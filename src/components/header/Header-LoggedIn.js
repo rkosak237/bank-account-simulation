@@ -1,16 +1,22 @@
 import * as React from 'react';
 import Nav from './Nav-LoggedIn'
-import { Link } from "react-router-dom";
 import AccountInfo from './AccountInfo';
+import Button from '../global/Button';
+import { connect } from "react-redux";
+import { logOut } from '../../actions/auth';
 
-export default () => (
+const HeaderLoggedIn = (props) => (
   <div className="header__wrapper">
     <AccountInfo />
     <Nav />
     <div className="header__logout">
-      <Link to="/">
-        <button className="btn">Logout</button>
-      </Link>
+        <Button text={'Logout'}
+        event={props.logOut}/>
     </div>
   </div>
 );
+
+export default connect(
+  null,
+  { logOut }
+)(HeaderLoggedIn);

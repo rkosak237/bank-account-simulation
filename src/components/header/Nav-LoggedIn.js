@@ -18,8 +18,8 @@ export default () => (
                 <a className="nav__text" href="#">Analyse</a>
             </li>
             <li className="nav-list__item">
-                <NavLink className="nav__text" to="/plan" activeClassName="selected">
-                    Plan
+                <NavLink className="nav__text" to="/calendar" activeClassName="selected">
+                    Calendar
                 </NavLink>
             </li>
             <li className="nav-list__item">

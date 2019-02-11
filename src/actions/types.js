@@ -14,3 +14,7 @@ export const FILTER_STATUS = 'FILTER_STATUS';
 export const LOG_MAIL = 'LOG_MAIL';
 export const LOG_PASSWORD = 'LOG_PASSWORD';
 
+//auth
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGIN_ERROR = 'LOGIN_ERROR';
+export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';

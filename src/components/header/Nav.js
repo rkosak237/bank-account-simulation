@@ -5,38 +5,24 @@ export default () => (
   <nav className="nav">
     <ul className="nav-list">
       <li className="nav-list__item">
-        <NavLink className="nav__text" to="/desktop" activeClassName="selected">
+        <NavLink className="nav__text" to="/" activeClassName="selected">
           Home
         </NavLink>
       </li>
       <li className="nav-list__item">
-        <NavLink className="nav__text" to="/history" activeClassName="selected">
-          History
+        <NavLink className="nav__text" to="/" activeClassName="selected">
+          Product
         </NavLink>
       </li>
       <li className="nav-list__item">
         <a className="nav__text" href="#">
-          Analyse
+          Version
         </a>
       </li>
       <li className="nav-list__item">
-        <NavLink className="nav__text" to="/plan" activeClassName="selected">
-          Plan
+        <NavLink className="nav__text" to="/" activeClassName="selected">
+          Newsletter
         </NavLink>
-      </li>
-      <li className="nav-list__item">
-        <NavLink
-          className="nav__text"
-          to="/transfer"
-          activeClassName="selected"
-        >
-          Transfer
-        </NavLink>
-      </li>
-      <li className="nav-list__item">
-        <a className="nav__text" href="#">
-          Search
-        </a>
       </li>
     </ul>
   </nav>

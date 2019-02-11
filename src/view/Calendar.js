@@ -1,22 +1,32 @@
 import * as React from 'react';
 import Header from "../components/header/Header";
 
+//redux
+import { connect } from "react-redux";
+//router
+import { Redirect } from "react-router-dom";
+
 class Calendar extends React.Component {
 
     render() {
+      const { auth } = this.props;
+      if (!auth.uid) return <Redirect to="/" />
         return (
-            <div>
-                <Header />
-                <div className="main__container">
-                    <div className="main__grid">
-                        <h1>Calendar</h1>
-                    </div>
-                </div>
+          <div>
+            <Header />
+            <div className="main__container fade-in">
+              <div className="main__grid">
+                <h1>Calendar</h1>
+              </div>
             </div>
-        )
+          </div>
+        );
     }
 }
 
-
-
-export default Calendar;
+const mapStateToProps = state => {
+  return {
+    auth: state.firebase.auth
+  };
+};
+export default connect(mapStateToProps)(Calendar);

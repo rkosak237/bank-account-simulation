@@ -1,10 +1,20 @@
 import * as React from 'react';
 import Header from "../components/header/Header";
+//redux
+import { connect } from "react-redux";
+//router
+import { Redirect } from "react-router-dom";
 
-export default () => (
+class Transfer extends React.Component {
+
+  render() {
+    const { auth } = this.props;
+    if (!auth.uid) return <Redirect to="/" />
+
+  return (
   <div>
     <Header />
-    <div className="main__container">
+    <div className="main__container fade-in">
       <section className="transfer-card">
         <div className="transfer-card__grid">
           <span className="previous-page">Arrow</span>
@@ -149,4 +159,14 @@ export default () => (
       </section>
     </div>
   </div>
-);
+    );
+  }
+}
+
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth
+  };
+};
+export default connect(
+  mapStateToProps)(Transfer);

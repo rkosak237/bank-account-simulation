@@ -19,6 +19,7 @@ export const fetchProducts = () => dispatch => {
             dispatch({
                 type: FETCH_PRODUCTS,
                 payload: products.content
+
             })
     );
 }
