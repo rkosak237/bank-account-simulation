@@ -1,20 +1,12 @@
 import * as React from 'react';
 import ListElement from './ListElement';
 import { connect } from 'react-redux';
-import { fetchHistory } from '../../actions/fetchActions';
-import Proptypes from 'prop-types';
 
 class SidebarHistory extends React.Component {
 constructor(props) {
     super(props);
-    this.state = {
-        isLoading: false
-    }
+    this.state = {}
 }
-    componentDidMount() {
-        this.setState({isLoading: true});
-        this.props.fetchHistory();
-    }
 
     render() {
         const historyBills = this.props.fetchItems;
@@ -40,13 +32,10 @@ constructor(props) {
 };
 const mapStateToProps = state => ({
     fetchItems: state.fetchItems.itemsHistory
-})
+});
 
-SidebarHistory.proptypes = {
-    fetchHistory: Proptypes.func.isRequired
-}
 
-export default connect(mapStateToProps, { fetchHistory })(SidebarHistory);
+export default connect(mapStateToProps)(SidebarHistory);
 
 
 

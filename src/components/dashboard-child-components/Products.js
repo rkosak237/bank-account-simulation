@@ -2,24 +2,14 @@ import * as React from 'react';
 import SingleProduct from './SingleProduct';
 import uuid from 'uuid';
 import { connect } from 'react-redux';
-import { fetchProducts } from '../../actions/fetchActions';
 
 
 class Products extends React.Component {
 constructor(props) {
     super(props);
-    this.state = {
-        isLoading: false
-    }
+    this.state = {}
 }
-    componentDidMount() {
-        this.setState({isLoading: true});
-        this.props.fetchProducts();
-    }
-
-
     render() {
-        const {isLoading} = this.state;
         const products = this.props.fetchItems;
         return (
             <section className="content__sidebar">
@@ -40,4 +30,4 @@ const mapStateToProps = state => ({
     fetchItems: state.fetchItems.itemsProducts
 })
 
-export default connect(mapStateToProps, { fetchProducts })(Products);
+export default connect(mapStateToProps)(Products);

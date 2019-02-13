@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchSummary } from '../../actions/fetchActions';
-import Proptypes from 'prop-types';
 import Button from "../global/Button";
 
 class Summary extends React.Component {
@@ -10,12 +8,8 @@ constructor(props) {
     super(props);
     this.state = {
         isLoading: false,
-
     }
 }
-    componentDidMount() {
-        this.props.fetchSummary();
-    }
 
     render() {
         const { isLoading } = this.state;
@@ -69,10 +63,7 @@ constructor(props) {
 
 const mapStateToProps = state => ({
     fetchItems: state.fetchItems.itemsSummary
-})
+});
 
-Summary.proptypes = {
-    fetchSummary: Proptypes.func.isRequired
-}
 
-export default connect(mapStateToProps, { fetchSummary })(Summary);
+export default connect(mapStateToProps)(Summary);

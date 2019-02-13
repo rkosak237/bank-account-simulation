@@ -4,7 +4,6 @@ const initialState = {
     itemsHistory: [],
     itemsProducts: [],
     itemsSummary: {},
-    isFetching: false,
 }
 
 export default (state = initialState, action) => {
@@ -12,17 +11,17 @@ export default (state = initialState, action) => {
         case FETCH_HISTORY:
             return {
                 ...state,
-                itemsHistory: action.payload
+                itemsHistory: action.payload,
             }
         case FETCH_PRODUCTS:
             return {
                 ...state,
-                itemsProducts: action.payload
+                itemsProducts: action.payload,
             }
         case FETCH_SUMMARY:
             return {
                 ...state,
-                itemsSummary: action.payload
+                itemsSummary: action.payload,
             }
         default:
             return state;

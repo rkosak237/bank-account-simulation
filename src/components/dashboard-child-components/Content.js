@@ -48,10 +48,10 @@ class Content extends React.Component {
         );
     }
 }
-const mapStateToProps = (state) => {
-    return {
-        auth: state.firebase.auth
-    };
-};
+
+const mapStateToProps = (state) => ({
+    auth: state.firebase.auth,
+});
+
 export default connect(
     mapStateToProps)(Content);

@@ -5,28 +5,11 @@ class RegiesterPage extends React.Component {
 constructor(props) {
   super(props);
 
-   this.state = {
-     user: {
-       email: '',
-       password: ''
-     },
-     validationError: {
-       invalidUser: false,
-       invalidEmail: false
-     },
-   }
+   this.state = {}
 }
 
 
   render() {
-    const {
-      userNameInBase,
-      showErrors
-    } = this.state;
-
-    const {
-      validationError
-    } = this.state;
 
      return (
       <div className="main__container fade-in signUp">
