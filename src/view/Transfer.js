@@ -162,10 +162,8 @@ class Transfer extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
+const mapStateToProps = (state) => ({
     auth: state.firebase.auth
-  };
-};
+});
 export default connect(
   mapStateToProps)(Transfer);
