@@ -2,16 +2,23 @@ import * as React from 'react';
 import { Link } from "react-router-dom";
 import Button from '../components/global/Button';
 
+//redux
+import { connect } from "react-redux";
+
+//router
+import { Redirect } from "react-router-dom";
+
 class LandingPage extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-
-        }
     }
+
     render() {
+      const { auth } = this.props;
+      if (auth.uid) return <Redirect to="/desktop" />
+
         return (
-          <div>
+          <div className="page">
             <div className="main__container">
               <section className="lp-product lp-product--gradient-bg section-centered">
                 <div className="main__grid lp-product__grid">
@@ -126,4 +133,9 @@ class LandingPage extends React.Component {
     }
 }
 
-export default LandingPage;
+const mapStateToProps = state => ({
+  auth: state.firebase.auth
+})
+
+export default connect(
+  mapStateToProps)(LandingPage);

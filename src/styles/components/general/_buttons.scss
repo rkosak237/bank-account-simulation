@@ -21,7 +21,7 @@
 }
 
 .btn:disabled {
-    background: btnColor(btn-disabled);
+    background: btnColor(disabled);
     transition: .3 ease-in-out;
 }
 

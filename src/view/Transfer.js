@@ -13,7 +13,6 @@ class Transfer extends React.Component {
 
   return (
   <div>
-    <Header />
     <div className="main__container fade-in">
       <section className="transfer-card">
         <div className="transfer-card__grid">

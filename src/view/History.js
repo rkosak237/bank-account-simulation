@@ -49,8 +49,7 @@ class History extends React.Component {
         return (
 
         <div>
-            <Header />
-            <div className="main__container fade-in">
+            <div className="main__container fade-in page">
 
               <div className="history-grid main__grid">
                 <h1 className="history__title">History</h1>

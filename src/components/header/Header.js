@@ -1,20 +1,20 @@
 import * as React from 'react';
 import HeaderLoggedIn from "./Header-LoggedIn";
-import HeaderLoggedOut from "./Header-LoggedOut";
+// import HeaderLoggedOut from "./Header-LoggedOut";
 import { connect } from 'react-redux';
 
-const Header = ({ auth }) => (
+const Header = () => (
   <header className="header">
     <div className="header__desktop-nav header__container">
-      {auth.uid ? <HeaderLoggedIn /> : <HeaderLoggedOut />}
+     <HeaderLoggedIn />
     </div>
   </header>
 );
 
-const mapStateToProps = (state) => {
-  return {
-    auth: state.firebase.auth
-  };
-}
+const AuthHeader = ({ auth }) => auth.uid ? <Header /> : (<div></div>);
 
-export default connect(mapStateToProps)(Header);
+const mapStateToProps = (state) => ({
+    auth: state.firebase.auth
+});
+
+export default connect(mapStateToProps)(AuthHeader);

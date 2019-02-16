@@ -13,7 +13,6 @@ class Calendar extends React.Component {
       if (!auth.uid) return <Redirect to="/" />
         return (
           <div>
-            <Header />
             <div className="main__container fade-in">
               <div className="main__grid">
                 <h1>Calendar</h1>

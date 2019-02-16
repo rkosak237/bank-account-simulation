@@ -35,9 +35,3 @@ export const fetchSummary = () => dispatch => {
 
     );
 }
-
-export const fetchAll = () => dispatch => {
-    fetchHistory();
-    fetchProducts();
-    fetchSummary();
-}
