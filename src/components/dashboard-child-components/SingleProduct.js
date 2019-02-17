@@ -1,10 +1,14 @@
 import * as React from 'react';
-// import { wallet, deposits, accounts, funds, bankLoans } from '../../assets/svgInTag/svg';
-import {WalletIcon, DepositsIcon, AccountsIcon, FundsIcon, BankLoansIcon} from '../../assets/svgInTag/svg';
+import { WalletIcon,
+    DepositsIcon,
+    AccountsIcon,
+    FundsIcon,
+    BankLoansIcon } from '../../assets/svgInTag/svg';
+// import { setIcon } from '../../js/setIcon';
 
 const SingleProduct = ({type, amount, currency}) => {
  const title = type;
-    const switchFunc = (icon) => {
+    const setIcon = (icon) => {
         const size = '90%';
         switch(icon) {
             case "Wallet":
@@ -34,15 +38,16 @@ const SingleProduct = ({type, amount, currency}) => {
             type = "icon-default"
         }
     }
-    return(
+    return (
         <a className="products__single-product" href='#'>
             <div className="single-product__icon">
-               {switchFunc(type)}
+                {setIcon(type)}
                {type}
             </div>
             <div className="single-product__description">
                 <p className="single-product__description__text">{title}</p>
-                <p className="single-product__description__text">{amount} {currency}</p>
+                <p className="single-product__description__text">
+                {amount} {currency}</p>
             </div>
         </a>
     )

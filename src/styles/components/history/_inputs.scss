@@ -6,10 +6,12 @@
     align-items: self-start;
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    flex-direction: column;
+
     @media (min-width: $tablet-landscape) {
         flex: 5;
-        align-items: center;
+        align-items: flex-end;
+        flex-direction: row;
     }
 }
 

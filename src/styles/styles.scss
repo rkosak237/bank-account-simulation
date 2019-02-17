@@ -4,23 +4,19 @@
 @import './base/base';
 @import './base/functions';
 @import './base/media-queries';
-
 //general
 @import './components/general/buttons';
 @import './components/general/header';
 @import './components/general/nav';
 @import './components/general/footer';
 @import './components/general/listElement';
-
 //landing-page
 @import './components/landing-page/product';
 @import './components/landing-page/overview';
 @import './components/landing-page/version';
 @import './components/landing-page/newsletter';
-
 //signup - login
 @import './components/signup/form';
-
 //desktop
 @import './components/desktop/containers';
 @import './components/desktop/summary';
@@ -29,17 +25,13 @@
 @import './components/desktop/chart';
 @import './components/desktop/products';
 @import './components/desktop/sidebarHistory';
-
 //history
 @import './components/history/history';
 @import './components/history/list';
 @import './components/history/inputs';
-
 //transfer
 @import './components/transfer/t-page';
-
+@import './components/transfer/transfer-types';
 //calendar
 @import './components/calendar/calendar';
-
-
 @import './base/animations';

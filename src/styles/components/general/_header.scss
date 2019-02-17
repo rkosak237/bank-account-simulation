@@ -14,7 +14,7 @@
 .header__container {
     height: 100%;
     width: 100%;
-    @media (min-width: $tablet-landscape) {
+    @media (min-width: $tablet) {
         width: 90%;
     }
 }

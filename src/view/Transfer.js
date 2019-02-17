@@ -4,6 +4,7 @@ import Header from "../components/header/Header";
 import { connect } from "react-redux";
 //router
 import { Redirect } from "react-router-dom";
+import TransferTypes from '../components/transfer/TransferTypes';
 
 class Transfer extends React.Component {
 
@@ -14,9 +15,10 @@ class Transfer extends React.Component {
   return (
   <div>
     <div className="main__container fade-in">
-      <section className="transfer-card">
+      <h1 className="c__title">Transfer</h1>
+      {/* <section className="transfer-card">
         <div className="transfer-card__grid">
-          <span className="previous-page">Arrow</span>
+          <span className="previous-page"> &#11176;</span>
           <div className="transfer__select-container" />
           <div className="transfer-card__content-grid">
             <div className="transfer__add-account">
@@ -54,6 +56,7 @@ class Transfer extends React.Component {
                   />
                   <label className="radio__label">Account</label>
                 </div>
+
                 <div className="transfer__content">
                   <input
                     type="radio"
@@ -62,6 +65,7 @@ class Transfer extends React.Component {
                   />
                   <label className="radio__label">Facebook</label>
                 </div>
+
                 <div className="transfer__content">
                   <input
                     type="radio"
@@ -70,6 +74,7 @@ class Transfer extends React.Component {
                   />
                   <label className="radio__label">Phone</label>
                 </div>
+
                 <div className="transfer__content">
                   <input
                     type="radio"
@@ -112,6 +117,7 @@ class Transfer extends React.Component {
             <div className="transfer__content">
               <p className="aside__text">Type of transfer</p>
               <div className="aside__container">
+
                 <div className="transfer__content">
                   <input
                     type="radio"
@@ -124,6 +130,7 @@ class Transfer extends React.Component {
                     About 7 days
                   </label>
                 </div>
+
                 <div className="transfer__content">
                   <input
                     type="radio"
@@ -136,6 +143,7 @@ class Transfer extends React.Component {
                     15 min
                   </label>
                 </div>
+
                 <div className="transfer__content">
                   <input
                     type="radio"
@@ -151,11 +159,14 @@ class Transfer extends React.Component {
             </div>
 
             <div className="transfer__add-account">
-              <button className="btn">Continue</button>
+              <button className="btn">Send Cash</button>
             </div>
           </div>
         </div>
-      </section>
+
+      </section> */}
+
+      <TransferTypes />
     </div>
   </div>
     );

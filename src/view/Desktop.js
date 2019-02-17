@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Header from "../components/header/Header";
 import Content from '../components/dashboard-child-components/Content';
 import Proptypes from 'prop-types';
 import Loading from '../components/dashboard-child-components/Loading';
@@ -15,8 +14,6 @@ class Desktop extends React.Component {
             isLoading: false
         }
     }
-
-
 
     componentDidMount() {
         this.props.fetchSummary();

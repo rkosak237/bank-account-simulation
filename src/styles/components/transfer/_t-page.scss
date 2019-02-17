@@ -1,18 +1,25 @@
 .transfer-card {
     border-radius: 10px;
     height: auto;
-    width: 60rem;
-    margin: $xl-size 0 $xl-size 0;
+    width: 100%;
+    margin: $s-size 0 $xl-size 0;
     box-shadow: 0 37.125px 70px -12.125px rgba(0, 0, 0, 0.3);
+
+    @media (min-width: $tablet) {
+        width: 60rem;
+    }
 }
 
 .transfer-card__grid {
     padding: $s-size;
 }
+
 .previous-page {
     display: block;
-    font-size: $m-size;
-    margin-bottom: $m-size;
+    font-size: $xl-size;
+    margin: $s-size 0;
+    cursor: pointer;
+    width: 5rem;
 }
 
 .transfer__select-container {
@@ -22,6 +29,7 @@
     display: flex;
     justify-content: space-between;
 }
+
 .transfer-card__content-grid {
     display: flex;
     justify-content: flex-start;
@@ -81,11 +89,9 @@
 }
 
 //radio
-
 .input--radio {
     width: 3rem;
     margin-right: 1rem;
-
 }
 
 .radio__label {

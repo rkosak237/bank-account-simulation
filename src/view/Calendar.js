@@ -15,7 +15,7 @@ class Calendar extends React.Component {
           <div>
             <div className="main__container fade-in">
               <div className="main__grid">
-                <h1>Calendar</h1>
+                <h1 className="c__title">Calendar</h1>
               </div>
             </div>
           </div>

@@ -51,8 +51,8 @@ class History extends React.Component {
         <div>
             <div className="main__container fade-in page">
 
-              <div className="history-grid main__grid">
-                <h1 className="history__title">History</h1>
+              <div className="history-grid main__grid history">
+                <h1 className="c__title">History</h1>
 
                 <div className="inputs__container">
                     <Search
@@ -79,7 +79,6 @@ class History extends React.Component {
                 <div>
                     <div className="list__container">
 
-                        <div>
                         <ul className="list__transactions">
                             {historyBills.map(bill => (
                             <ListElement
@@ -89,7 +88,6 @@ class History extends React.Component {
                             />
                             ))}
                         </ul>
-                        </div>
 
                     </div>
                 </div>
