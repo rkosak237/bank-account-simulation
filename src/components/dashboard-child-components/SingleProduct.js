@@ -9,30 +9,30 @@ import { WalletIcon,
 const SingleProduct = ({type, amount, currency}) => {
  const title = type;
     const setIcon = (icon) => {
-        const size = '90%';
+        const classes = 'single-product__icon';
         switch(icon) {
             case "Wallet":
                 type =
                 <WalletIcon
-                size={size}/>
+                classes={classes}/>
             break;
             case "Deposits":
                 type =
                 <DepositsIcon
-                size={size}/>
+                classes={classes}/>
             break;
             case "Accounts":
                 type =
                 <AccountsIcon
-                size={size}/>
+                classes={classes}/>
             break;
             case "Funds":
                 type = <FundsIcon
-                size={size}/>
+                classes={classes}/>
             break;
             case "Bank loans":
                 type = <BankLoansIcon
-                size={size}/>
+                classes={classes}/>
             break;
         default:
             type = "icon-default"
@@ -40,7 +40,7 @@ const SingleProduct = ({type, amount, currency}) => {
     }
     return (
         <a className="products__single-product" href='#'>
-            <div className="single-product__icon">
+            <div className="single-product__icon-container">
                 {setIcon(type)}
                {type}
             </div>
