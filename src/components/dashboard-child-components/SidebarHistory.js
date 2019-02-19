@@ -5,9 +5,7 @@ import { connect } from 'react-redux';
 class SidebarHistory extends React.Component {
 constructor(props) {
     super(props);
-    this.state = {}
 }
-
     render() {
         const historyBills = this.props.fetchItems;
         const filtered = historyBills
