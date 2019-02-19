@@ -2,7 +2,7 @@
     padding: $xxl-size 0;
     &__grid {
         @extend .lp-product__grid;
-        align-items: unset;
+        align-items: center;
         justify-content: center;
         flex-direction: column;
         @media (min-width: $tablet) {
@@ -12,8 +12,11 @@
     &__content {
         width: 100%;
         @media (min-width: $tablet) {
-            width: 30%;
+            width: 33.33%;
+            text-align: center;
         }
+    }
+    &__title {
     }
     &__text {
         @extend .lp-product__text;

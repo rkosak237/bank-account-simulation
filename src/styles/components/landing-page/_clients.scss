@@ -1,0 +1,29 @@
+.clients {
+    background-image: linear-gradient(rgb(237, 241, 242) 0px, rgb(246, 248, 249));
+    &__content {
+        padding: $xxl-size 0;
+        display: flex;
+        justify-content: center;
+        @media (min-width: $tablet) {
+            justify-content: space-around;
+        }
+    }
+    &__img {
+        @media (min-width: $tablet) {
+            background: grey;
+            height: 30rem;
+            width: 50rem;
+        }
+    }
+    &__text {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @extend .theme__text;
+        @media (min-width: $tablet) {
+            width: 40rem;
+        }
+    }
+}

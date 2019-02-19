@@ -7,6 +7,9 @@ export default () => (
         <div className="lp-newsletter__grid">
             <div className="lp-newsletter__content">
                 <h2 className="lp-newsletter__title">Newsletter</h2>
+                <p className="lp-newsletter__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?
+                </p>
 
                 <form className="lp-newsletter__form" action="">
                     <input

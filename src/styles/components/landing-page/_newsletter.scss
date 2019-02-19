@@ -22,6 +22,10 @@
         height: $l-size;
         width: 80%;
     }
+    &__text {
+        text-align: center;
+        @extend .theme__text;
+    }
     &__input {
         border: 1px solid themeColor(input-color);
         height: inherit;

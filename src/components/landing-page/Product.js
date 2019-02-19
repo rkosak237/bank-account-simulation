@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Button from '../global/Button';
 
 export default () => (
-    <section className="lp-product lp-product--gradient-bg section-centered">
+    <section className="lp-product lp-product--gradient-bg grid-centered">
         <div className="main__grid lp-product__grid">
             <div className="lp-product__content">
                 <h1 className="lp-product__title lp-product__title--light">

@@ -37,8 +37,8 @@
         }
     }
     &__text {
-        font: 2rem 'Noto Serif SC', serif;
         width: 90%;
+        @extend .theme__text;
         @media (min-width: $tablet) {
             width: 90%;
         }
@@ -60,23 +60,6 @@
             width: 33rem;
         }
     }
-}
-
-@keyframes bg-animation__gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.section-centered {
-    display: flex;
-    justify-content: center;
 }
 
 .content--dark {

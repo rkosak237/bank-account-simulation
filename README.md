@@ -15,7 +15,7 @@ Bank account account simulation
 
 ## Development
 
-Firtst install npm to open files on your computer
+First install npm to open files on your computer
 
 ```
 npm install
