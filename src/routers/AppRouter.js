@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Switch } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import LandingPage from '../view/LandingPage';
 import Desktop from '../view/Desktop';
@@ -11,7 +11,7 @@ import RegiesterPage from '../view/RegiesterPage';
 import Header from '../components/header/Header';
 
 const AppRouter = () => (
-  <BrowserRouter>
+  <HashRouter>
     <div>
     <Header />
           <Route render={({location}) => (
@@ -34,6 +34,6 @@ const AppRouter = () => (
           )}
           />
     </div>
-  </BrowserRouter>
+  </HashRouter>
 )
 export default AppRouter;

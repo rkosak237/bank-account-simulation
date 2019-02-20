@@ -4,21 +4,12 @@ import './styles/styles.scss';
 import AppRouter from './routers/AppRouter';
 import { Provider } from 'react-redux'
 import store from './store/configureStore';
+import Product from './components/landing-page/Product';
 
-
-// const App = () => (
-//       <div>
-//         <AppRouter />
-//       </div>
-// );
 
 const App = () => (
         <Provider store={store}>
                 <AppRouter />
         </Provider>
 );
-// setTimeout(() => {
-//         console.log(store.getState());
-// }, 5000);
-
 export default App;
