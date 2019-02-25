@@ -7,7 +7,7 @@ import LogInPage from "../view/LogInPage";
 import History from '../view/History';
 import Transfer from '../view/Transfer';
 import Calendar from '../view/Calendar';
-import RegiesterPage from '../view/RegiesterPage';
+import RegisterPage from '../view/RegisterPage';
 import Header from '../components/header/Header';
 
 const AppRouter = () => (
@@ -23,7 +23,7 @@ const AppRouter = () => (
                   <Switch location={location}>
                     <Route path="/" exact={true} component={LandingPage} />
                     <Route path="/login" exact={true} component={LogInPage} />
-                    <Route path="/regiester" exact={true} component= {RegiesterPage} />
+                    <Route path="/register" exact={true} component= {RegisterPage} />
                     <Route path="/desktop" exact={true} component={Desktop} />
                     <Route path="/history" exact={true} component={History} />
                     <Route path="/calendar" exact={true} component={Calendar} />

@@ -20,8 +20,8 @@ export default () => (
                     <Link to="/login">
                         <Button text={"Login"} />
                     </Link>
-                    <Link to="/regiester">
-                        <Button text={"Regiester"} />
+                    <Link to="/register">
+                        <Button text={"Register"} />
                     </Link>
                 </div>
             </div>
