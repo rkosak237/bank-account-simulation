@@ -23,6 +23,7 @@
         width: 80%;
     }
     &__text {
+        padding: 0 $l-size;
         text-align: center;
         @extend .theme__text;
     }

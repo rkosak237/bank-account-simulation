@@ -22,8 +22,10 @@
         align-items: center;
         flex-direction: column;
         @extend .theme__text;
+
         @media (min-width: $tablet) {
-            width: 40rem;
+            width: 50rem;
+            padding: 0 0 0 2rem;
         }
     }
 }

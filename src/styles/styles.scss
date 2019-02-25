@@ -4,12 +4,13 @@
 @import './base/base';
 @import './base/functions';
 @import './base/media-queries';
-//general
-@import './components/general/buttons';
-@import './components/general/header';
-@import './components/general/nav';
-@import './components/general/footer';
-@import './components/general/listElement';
+
+//global
+@import './components/global/buttons';
+@import './components/global/header';
+@import './components/global/nav';
+@import './components/global/footer';
+@import './components/global/listElement';
 //landing-page
 @import './components/landing-page/product';
 @import './components/landing-page/overview';

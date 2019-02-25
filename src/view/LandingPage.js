@@ -3,6 +3,7 @@ import Product from '../components/landing-page/Product';
 import Overview from '../components/landing-page/Overview';
 import Version from '../components/landing-page/Version';
 import Newsletter from '../components/landing-page/Newsletter';
+import Footer from '../components/global/Footer';
 //redux
 import { connect } from "react-redux";
 
@@ -40,6 +41,7 @@ class LandingPage extends React.Component {
               </div>
             </div>
           </section>
+          <Footer />
         </div>
       </div>
     );

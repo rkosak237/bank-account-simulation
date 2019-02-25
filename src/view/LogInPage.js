@@ -3,6 +3,7 @@ import LogIn from '../components/login/LogIn';
 import { connect } from "react-redux";
 import { Redirect } from 'react-router-dom';
 import { logIn } from '../actions/auth';
+import Previous from '../components/global/Previous';
 
 class LogInPage extends React.Component {
 constructor(props) {
@@ -31,7 +32,9 @@ constructor(props) {
 
    this.props.logIn(this.state.user);
    if (authError) {
-    //  this.props.history.push("/desktop");
+     this.setState({
+       showErrors: false,
+     });
    } else {
      this.setState({
        showErrors: true,
@@ -103,8 +106,8 @@ constructor(props) {
     if(auth.uid) return <Redirect to="/desktop" />
 
      return (
-       <div className="main__container fade-in signUp">
-        <section className="signUp__container">
+       <div className="main__container signUp">
+        <section className="signUp__container fade-in">
           <LogIn
             email={this.state.user.mail}
             password={this.state.user.password}

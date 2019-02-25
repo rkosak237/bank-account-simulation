@@ -1,9 +1,9 @@
 import * as React from 'react';
 
 export default () => (
-    <footer>
+    <footer className="footer">
         <div>
-           <p>Footer</p>
+            <p>© 2018-2019 Bobby K. All Rights Reserved</p>
         </div>
     </footer>
 );
