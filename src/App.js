@@ -4,7 +4,6 @@ import './styles/styles.scss';
 import AppRouter from './routers/AppRouter';
 import { Provider } from 'react-redux'
 import store from './store/configureStore';
-import Product from './components/landing-page/Product';
 
 
 const App = () => (

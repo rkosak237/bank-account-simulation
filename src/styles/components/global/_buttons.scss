@@ -27,7 +27,6 @@
 
 .payment__btn {
     display: none;
-
     @media (min-width: $tablet-landscape) {
         display: inline-block;
         margin-left: $m-size;
@@ -39,4 +38,21 @@
 .btn--bg-transparent {
     background: none;
     color: btnColor(forgotten-password);
+}
+
+.logout-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    &__icon {
+        fill: btnColor(logout);
+        height: $l-size;
+        width: $l-size;
+        transition: .5s ease-in-out;
+
+        &:hover {
+            fill: btnColor(logout-h);
+            transform: scale(1.1);
+        }
+    }
 }

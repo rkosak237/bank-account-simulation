@@ -40,7 +40,7 @@
         width: 90%;
         @extend .theme__text;
         @media (min-width: $tablet) {
-            width: 90%;
+            width: 55rem;
         }
     }
     &--gradient-bg {

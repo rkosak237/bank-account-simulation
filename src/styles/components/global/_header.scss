@@ -9,54 +9,54 @@
     height: $xxl-size;
     width: 100%;
     justify-content: center;
-}
-
-.header__container {
-    height: 100%;
-    width: 100%;
-    @media (min-width: $tablet) {
-        width: 90%;
+    &__container {
+        height: 100%;
+        width: 100%;
+        @media (min-width: $tablet) {
+            width: 90%;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        height: inherit;
+    }
+    &__account {
+        display: flex;
+        flex: 1;
+    }
+    &__logo {
+        height: $xxl-size;
+        width: $xxl-size;
+        color: themeColor(light-font);
+        background: themeColor(grey);
+    }
+    &__logout {
+        display: flex;
+        font-weight: bold;
+        align-items: center;
     }
 }
 
-.header__wrapper {
-    display: flex;
-    height: inherit;
+.account {
+    &__profile-img {
+        height: $xxl-size;
+        width: $xxl-size;
+        background: themeColor(grey);
+        color: themeColor(light-font);
+    }
+    &__user {
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+        padding: 0 $s-size;
+    }
+    &__settings {
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
-.header__account {
-    display: flex;
-    flex: 1;
-}
-
-.header__logo {
-    height: $xxl-size;
-    width: $xxl-size;
-    color: themeColor(light-font);
-    background: themeColor(grey);
-}
-
-.account__profile-img {
-    height: $xxl-size;
-    width: $xxl-size;
-    background: themeColor(grey);
-    color: themeColor(light-font);
-}
-
-.account__user {
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    padding: 0 $s-size;
-}
-
-.account__settings {
-    display: flex;
-    justify-content: space-around;
-}
-
-.header__logout {
-    display: flex;
-    font-weight: bold;
-    align-items: center;
+.settings__box {
+    height: $m-size;
+    width: $m-size;
 }

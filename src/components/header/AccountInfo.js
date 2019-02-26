@@ -14,8 +14,8 @@ const AccountInfo = () => (
     <div className="account__user">
       <h3>John Doe</h3>
       <div className="account__settings">
-        <EnvelopeIcon className="settings__box" size={iconSize} />
-        <SettingsIcon className="settings__box" size={iconSize} />
+        <EnvelopeIcon classes={"settings__box"} />
+        <SettingsIcon classes={"settings__box"} />
       </div>
     </div>
   </div>

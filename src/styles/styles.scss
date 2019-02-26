@@ -4,7 +4,6 @@
 @import './base/base';
 @import './base/functions';
 @import './base/media-queries';
-
 //global
 @import './components/global/buttons';
 @import './components/global/header';
@@ -18,7 +17,8 @@
 @import './components/landing-page/newsletter';
 @import './components/landing-page/clients';
 //signup - login
-@import './components/signup/form';
+@import './components/forms/form';
+@import './components/forms/login';
 //desktop
 @import './components/desktop/containers';
 @import './components/desktop/summary';
