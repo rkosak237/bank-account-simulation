@@ -2,6 +2,24 @@
 
 Bank account account simulation
 
+
+## Login
+
+In next weeks project will register yourself as a new user. Until then you need to use passes below to get access to the app
+
+L: admin123@admin.com
+P: admin123
+
+## Incoming functionalities:
+* Loading spinner between login and desktop view. It will be visible until fetch from database will be completed.
+* Nav mobile
+* Calendar
+* Register form - Also your data will be displayed in details about user placed in header
+* Login and register validation
+* 404 page
+* Forgotten password page
+
+
 ## Features
 * [React (v16.3)](https://reactjs.org) - a JavaScript library for building user interfaces
 * [Babel](https://babeljs.io) - a JavaScript compiler
@@ -10,7 +28,7 @@ Bank account account simulation
 * [Redux](https://github.com/reduxjs/react-redux)
 * [Router](https://github.com/ReactTraining/react-router)
 * [React Hot Loader (v4)](https://github.com/gaearon/react-hot-loader) Tweak React components in real time
-
+* [Firebase]
 
 
 ## Development
