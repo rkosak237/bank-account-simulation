@@ -10,22 +10,20 @@ import { connect } from "react-redux";
 class Desktop extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            isLoading: false
-        }
     }
 
     componentDidMount() {
+        this.props.fetchRequest();
         this.props.fetchSummary();
         this.props.fetchHistory();
         this.props.fetchProducts();
     }
 
     render() {
-        const { isLoading } = this.state;
+        const { isFetching } = this.props;
 
-        if (isLoading)
-            return <Loading classes={isLoading ? "desktop-loading__bg" : "desktop-loading__bg fade-out"}/>
+        if (isFetching )
+            return <Loading classes={isFetching ? "desktop-loading__bg" : "desktop-loading__bg fade-out"}/>
 
         return (
             <div className="page">
@@ -34,12 +32,19 @@ class Desktop extends React.Component {
         );
     }
 }
+const mapStateToProps = state => ({
+    isFetching: state.fetchItems.isFetching,
+    itemsHistory: state.fetchItems.itemsHistory,
+    itemsProducts: state.fetchItems.itemsProducts,
+    itemsSummary: state.fetchItems.itemsSummary
+})
 
 Desktop.proptypes = {
     fetchSummary: Proptypes.func.isRequired,
     fetchHistory: Proptypes.func.isRequired,
     fetchProducts: Proptypes.func.isRequired,
+    fetchRequest: Proptypes.func.isRequired
 }
 
 export default connect(
-    null, actions)(Desktop);
+    mapStateToProps, actions)(Desktop);
