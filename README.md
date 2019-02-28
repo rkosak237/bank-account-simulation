@@ -7,18 +7,32 @@ Bank account account simulation
 
 In next weeks project will register yourself as a new user. Until then you need to use passes below to get access to the app
 
-L: admin123@admin.com
-P: admin123
+### Login and password
+* L: admin123@admin.com
+* P: admin123
 
 ## Incoming functionalities:
 * Loading spinner between login and desktop view. It will be visible until fetch from database will be completed.
 * Nav mobile
-* Calendar
+* Calendar - showing costs
 * Register form - Also your data will be displayed in details about user placed in header
 * Login and register validation
-* 404 page
-* Forgotten password page
+* Modal after sending - transfer
+* Adding your own cost to the app
 
+## Incoming pages:
+* 404
+* Forgotten password
+* Page for each cost
+
+
+## Working functionalities:
+* Login in/out with firebase
+* Fetching banking dummy data
+* 2 Charts with visualization of data
+* History component: searching, filtering list
+* Routing
+* Redux store - reducers and actions are tested with Jest
 
 ## Features
 * [React (v16.3)](https://reactjs.org) - a JavaScript library for building user interfaces
