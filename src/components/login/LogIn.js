@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Input from './Input';
+import { Link } from "react-router-dom";
 
 export default ({ email, handleChange, handleSubmit, password }) => (
   <form className="LogIn__form" onSubmit={handleSubmit}>
@@ -27,7 +28,9 @@ export default ({ email, handleChange, handleSubmit, password }) => (
       <button type="submit" className="btn">
         Log in
       </button>
-      <button className="btn btn--bg-transparent">Forgoten password?</button>
+      <Link to="/forgottenpassword">
+        <button className="btn btn--bg-transparent">Forgoten password?</button>
+      </Link>
     </div>
   </form>
 );
