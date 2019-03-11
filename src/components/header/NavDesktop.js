@@ -2,16 +2,16 @@ import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 
 export default () => (
-    <nav className="nav">
+    <div className="nav__desktop">
         <ul className="nav-list">
             <li className="nav-list__item">
                 <NavLink className="nav__text" to="/desktop" activeClassName="selected">
-                Home
+                    Home
                 </NavLink>
             </li>
             <li className="nav-list__item">
                 <NavLink className="nav__text" to="/history" activeClassName="selected">
-                History
+                    History
                 </NavLink>
             </li>
             <li className="nav-list__item">
@@ -24,12 +24,9 @@ export default () => (
             </li>
             <li className="nav-list__item">
                 <NavLink className="nav__text" to="/transfer" activeClassName="selected">
-                Transfer
+                    Transfer
                 </NavLink>
             </li>
-            <li className="nav-list__item">
-                <a className="nav__text" href="#">Search</a>
-            </li>
         </ul>
-    </nav>
+    </div>
 );

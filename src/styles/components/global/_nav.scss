@@ -1,42 +1,73 @@
 .nav {
-    display: none;
-    @media (min-width: $tablet-landscape) {
-        align-items: center;
-        display: flex;
-        flex: 1;
-        justify-content: space-around;
-    }
-}
-
-.nav-list {
-    list-style: none;
+    align-items: center;
     display: flex;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-}
-
-.nav-list__item {
-    text-align: center;
-}
-
-.nav__text {
-    padding-left: $s-size;
-    padding-right: $s-size;
-    text-decoration: none;
-    font-size: $m-size;
-    color: themeColor(font-color);
-    font-weight: bold;
-    transition: .2s ease-in-out;
-    display: block;
-    box-sizing: border-box;
-    padding-top: 42px;
-    height: 100%;
-    &:hover {
-        background: btnColor(hover-background);
+    flex: 1;
+    justify-content: space-around;
+    height: 100vh;
+    @media (min-width: $tablet-landscape) {
+        height: unset;
     }
-    &:focus {
-        color: btnColor(focus-font);
-        background: btnColor(focus-bg);
+    &__desktop {
+        display: none;
+        height: 100%;
+        @media (min-width: $tablet-landscape) {
+            display: flex;
+        }
+    }
+    &__text {
+        padding-left: $s-size;
+        padding-right: $s-size;
+        text-decoration: none;
+        font-size: $m-size;
+        color: themeColor(font-color);
+        font-weight: bold;
+        transition: .2s ease-in-out;
+        display: block;
+        box-sizing: border-box;
+        padding-top: 42px;
+        height: 100%;
+        &:hover {
+            background: btnColor(hover-background);
+        }
+        &:focus {
+            color: btnColor(focus-font);
+            background: btnColor(focus-bg);
+        }
+    }
+    &-list {
+        list-style: none;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+        &__item {
+            text-align: center;
+        }
+    }
+}
+
+.nav-mobile {
+    display: none;
+
+    &__bg {
+        background: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: 5;
+    }
+    .nav-list {
+        flex-direction: column;
+        padding: 0;
+        z-index: 6;
+        .nav__text {
+            padding: $m-size;
+        }
+    }
+    &--open {
+        display: flex;
     }
 }

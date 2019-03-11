@@ -15,7 +15,7 @@
         flex-direction: column;
         @media (min-width: $tablet) {
             justify-content: space-between;
-            width: 60%;
+            width: 60rem;
             margin: 0 0 $s-size 0;
             flex-direction: row;
             align-items: flex-start;

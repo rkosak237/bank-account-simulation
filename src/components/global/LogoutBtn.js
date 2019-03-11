@@ -1,14 +1,16 @@
 import * as React from 'react';
 import { connect } from "react-redux";
 import { logOut } from '../../actions/auth';
+
+//svg icon
 import { LogOut } from '../../assets/svgInTag/svg';
 
 const LogoutBtn = (props) => (
     <button
-        className="logout-btn"
+        className="btn-logout"
         onClick={props.logOut}>
         <LogOut
-            classes={`logout-btn__icon`}/>
+            classes={`btn-logout__icon`}/>
     </button>
 );
 
