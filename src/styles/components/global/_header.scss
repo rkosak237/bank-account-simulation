@@ -74,7 +74,6 @@
     background: transparent;
     position: relative;
     transition: 0.3s transform linear;
-    z-index: 6;
 
     @media (min-width: $tablet-landscape) {
         display: none;
@@ -102,9 +101,6 @@
     border: none;
 }
 
-.btn_mobile:focus, .nav-mobile {
-    display: flex;
-}
 .btn__mobile:focus::after {
     transform: rotate(-90deg) translateX(-10px);
 }

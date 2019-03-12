@@ -19,3 +19,6 @@ export const LOG_PASSWORD = 'LOG_PASSWORD';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_ERROR = 'LOGIN_ERROR';
 export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
+
+//mobile
+export const TOGGLE_NAV = 'TOGGLE_NAV';

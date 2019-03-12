@@ -4,7 +4,6 @@ import { WalletIcon,
     AccountsIcon,
     FundsIcon,
     BankLoansIcon } from '../../assets/svgInTag/svg';
-// import { setIcon } from '../../js/setIcon';
 
 const SingleProduct = ({type, amount, currency}) => {
  const title = type;
