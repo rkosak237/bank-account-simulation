@@ -1,9 +1,9 @@
 .transfer-card {
     border-radius: 10px;
-    height: auto;
-    width: 100%;
-    margin: $s-size 0 $xl-size 0;
     box-shadow: 0 37.125px 70px -12.125px rgba(0, 0, 0, 0.3);
+    height: auto;
+    margin: $s-size 0 $xl-size 0;
+    width: 100%;
 
     @media (min-width: $tablet) {
         width: 60rem;
@@ -15,49 +15,49 @@
 }
 
 .previous-page {
+    cursor: pointer;
     display: block;
     font-size: $xl-size;
     margin: $s-size 0;
-    cursor: pointer;
     width: 5rem;
 }
 
 .transfer__select-container {
-    height: $l-size;
-    border: 1px solid themeColor(border-color);
     border-radius: 10px;
+    border: 1px solid themeColor(border-color);
     display: flex;
+    height: $l-size;
     justify-content: space-between;
 }
 
 .transfer-card__content-grid {
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
+    justify-content: flex-start;
 }
 
 .transfer__add-account {
-    display: flex;
     align-items: center;
     align-self: flex-end;
+    display: flex;
     margin: $m-size 0 0 0;
     width: 70%;
 }
 
 .add-account__icon {
-    display: block;
-    content: '';
-    height: $l-size;
-    width: $l-size;
     background: themeColor(grey);
+    content: '';
+    display: block;
+    height: $l-size;
     margin-right: $s-size;
+    width: $l-size;
 }
 
 .transfer__content {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
+    display: flex;
     height: auto;
+    justify-content: space-between;
 }
 
 .aside__text {
@@ -65,8 +65,8 @@
 }
 
 .aside__container {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: space-between;
     width: 70%;
 }
@@ -90,8 +90,8 @@
 
 //radio
 .input--radio {
-    width: 3rem;
     margin-right: 1rem;
+    width: 3rem;
 }
 
 .radio__label {

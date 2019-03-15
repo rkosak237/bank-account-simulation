@@ -10,40 +10,40 @@
 //Main theme
 $theme-colors: (
     bg-color: #fff,
-    h1-color: #000,
-    footer-bg: #2c3e50,
-    font-color: #202020,
-    input-color: #929090,
-    border-color: #0c0b0b,
     blue-accent: #0076FF,
+    border-color: #0c0b0b,
+    font-color: #202020,
+    footer-bg: #2c3e50,
     grey: #808080,
-    light-font: #fff,
+    h1-color: #000,
     inactive-icon: #808080,
+    input-color: #929090,
+    light-font: #fff,
     underline-color: #929090,
 );
 
 //modifires
 $modifiers: (
+    error: #e74c3c,
     income: #27ae60,
     outcome: #e74c3c,
-    error: #e74c3c,
     valid: #27ae60,
 );
 
 //btn colors
 $btn-colors: (
-    blue-accent: #0076FF,
-    hamburger: #000,
-    focus-font: #fff,
-    focus-bg: #0076FF,
     background: #0076FF,
+    blue-accent: #0076FF,
+    disabled: #635e5e,
+    focus-bg: #0076FF,
+    focus-font: #fff,
     forgotten-password: #0076FF,
-    text: #fff,
+    hamburger: #000,
     hover-background: lighten(#0076FF, 40%),
     hover-text: #fff,
-    disabled: #635e5e,
-    logout: #e74c3c,
     logout-h: #c0392b,
+    logout: #e74c3c,
+    text: #fff,
 );
 
 //Spacing - sizes

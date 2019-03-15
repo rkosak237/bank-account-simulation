@@ -9,9 +9,9 @@
     flex-direction: column;
 
     @media (min-width: $tablet-landscape) {
+        flex-direction: row;
         justify-content: space-between;
         margin: $s-size 0 0 0;
-        flex-direction: row;
     }
 }
 

@@ -7,18 +7,18 @@
         }
     }
     &__content {
+        align-items: center;
         color: white;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         height: 50rem;
+        justify-content: center;
         padding: 0 $xl-size;
     }
     &__text {
-        text-align: center;
         font-size: 2rem;
         padding: $m-size 0;
+        text-align: center;
         width: 80%;
         @media (min-width: $tablet) {
             width: 60%;

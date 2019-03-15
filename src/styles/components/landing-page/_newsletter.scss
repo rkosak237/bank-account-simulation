@@ -2,17 +2,17 @@
     height: 100%;
     width: 100%;
     &__grid {
+        align-items: center;
         display: flex;
         justify-content: center;
-        align-items: center;
     }
     &__content {
-        width: 70rem;
+        align-items: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         padding: 15rem 0;
+        width: 70rem;
     }
     &__title {
         font-size: $xl-size;
@@ -23,16 +23,16 @@
         width: 80%;
     }
     &__text {
+        @extend .theme__text;
         padding: 0 $l-size;
         text-align: center;
-        @extend .theme__text;
     }
     &__input {
+        border-right: 0px;
         border: 1px solid themeColor(input-color);
         height: inherit;
         padding: 0 $s-size;
         width: 80%;
-        border-right: 0px;
     }
     &__form-btn {
         height: inherit;

@@ -1,9 +1,9 @@
 .clients {
     background-image: linear-gradient(rgb(237, 241, 242) 0px, rgb(246, 248, 249));
     &__content {
-        padding: $xxl-size 0;
         display: flex;
         justify-content: center;
+        padding: $xxl-size 0;
         @media (min-width: $tablet) {
             justify-content: space-around;
         }
@@ -16,16 +16,16 @@
         }
     }
     &__text {
-        width: 90%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
         @extend .theme__text;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
 
         @media (min-width: $tablet) {
-            width: 50rem;
             padding: 0 0 0 2rem;
+            width: 50rem;
         }
     }
 }

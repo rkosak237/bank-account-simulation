@@ -3,8 +3,8 @@
     &__grid {
         @extend .lp-product__grid;
         align-items: center;
-        justify-content: center;
         flex-direction: column;
+        justify-content: center;
         @media (min-width: $tablet) {
             flex-direction: row;
         }
@@ -12,11 +12,9 @@
     &__content {
         width: 100%;
         @media (min-width: $tablet) {
-            width: 33.33%;
             text-align: center;
+            width: 33.33%;
         }
-    }
-    &__title {
     }
     &__text {
         width: 90%;

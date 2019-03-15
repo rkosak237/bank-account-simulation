@@ -1,17 +1,17 @@
 .inputs__container {
     @extend .history-grid;
     @extend .main__grid;
-    width: 100%;
-    flex: 1;
     align-items: self-start;
     display: flex;
-    justify-content: space-evenly;
     flex-direction: column;
+    flex: 1;
+    justify-content: space-evenly;
+    width: 100%;
 
     @media (min-width: $tablet-landscape) {
-        flex: 5;
         align-items: flex-end;
         flex-direction: row;
+        flex: 5;
     }
 }
 
@@ -19,8 +19,8 @@
 .search__input,
 .history__filter {
     border-radius: 10px;
-    box-shadow: none;
     border: 1px solid black;
+    box-shadow: none;
     padding: $s-size * 0.5;
     width: 100%;
     @media (min-width: $tablet-landscape) {
@@ -40,8 +40,8 @@
 }
 
 .inputs__element {
-    display: flex;
     align-items: center;
+    display: flex;
     width: 100%;
     @media (min-width: $tablet-landscape) {
         width: unset;

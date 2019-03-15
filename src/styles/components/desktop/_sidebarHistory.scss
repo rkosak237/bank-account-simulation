@@ -1,10 +1,10 @@
 .sidebarHistory {
 
     &__wrapper {
-        border: 1px solid themeColor(input-color);
         border-radius: 10px;
-        overflow-y: scroll;
+        border: 1px solid themeColor(input-color);
         height: 30rem;
+        overflow-y: scroll;
 
         @media (min-width: $tablet-landscape) {
             height: 35rem;

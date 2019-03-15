@@ -1,20 +1,20 @@
 .toggle {
-    position: relative;
-    width: 95px;
-    height: $l-size;
     border-radius: 40px;
     cursor: pointer;
+    height: $l-size;
+    position: relative;
+    width: 95px;
 }
 
 .toggle input {
-    opacity: 0;
     cursor: pointer;
+    height: 34px;
+    left: 0;
+    opacity: 0;
     position: absolute;
     top: 0;
-    left: 0;
-    z-index: 6;
     width: 84px;
-    height: 34px;
+    z-index: 6;
 }
 
 .toggle input:checked~.toggle__btn {
@@ -26,48 +26,48 @@
 }
 
 .toggle .toggle__btn {
-    display: block;
-    position: absolute;
-    z-index: 4;
-    top: 7px;
-    left: 2px;
-    width: $m-size;
-    height: $m-size;
-    border: 2px solid #1f1e1e;
     border-radius: 50px;
+    border: 2px solid #1f1e1e;
     box-shadow: 0 5px 5px rgba(50, 50, 50, 0.2);
+    display: block;
+    height: $m-size;
+    left: 2px;
+    position: absolute;
+    top: 7px;
     transition: left 0.25s ease;
+    width: $m-size;
+    z-index: 4;
 }
 
 .toggle .toggle__btn:after {
-    content: "";
-    position: absolute;
-    top: 36%;
-    left: 70%;
-    margin-top: -12.5px;
-    margin-left: -12.5px;
-    width: 30px;
-    height: 30px;
     background: #e3e3e3;
     border-radius: 50px;
+    content: "";
+    height: 30px;
+    left: 70%;
+    margin-left: -12.5px;
+    margin-top: -12.5px;
+    position: absolute;
+    top: 36%;
+    width: 30px;
 }
 
 .toggle .toggle__label {
-    position: absolute;
-    top: 10px;
-    z-index: 2;
-    width: 100%;
+    color: #fff;
     font-family: Helvetica, sans-serif;
     font-weight: bold;
-    color: #fff;
-    text-transform: uppercase;
+    position: absolute;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    top: 10px;
+    width: 100%;
+    z-index: 2;
 }
 
 .toggle input:checked~.toggle__label:before {
     content: "On";
-    position: absolute;
     left: 7px;
+    position: absolute;
     top: -1px;
 }
 
@@ -85,13 +85,13 @@
 }
 
 .toggle .toggle__bg {
-    display: block;
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 40px;
     background: grey;
+    border-radius: 40px;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
 }

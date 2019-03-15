@@ -11,13 +11,13 @@
 
 .fade-appear-active,
 .fade-enter-active {
-    transition: opacity .3s linear;
     opacity: 1;
+    transition: opacity .3s linear;
 }
 
 .fade-exit {
-    transition: opacity .2s linear;
     opacity: 1;
+    transition: opacity .2s linear;
 }
 
 .fade-exit-active {

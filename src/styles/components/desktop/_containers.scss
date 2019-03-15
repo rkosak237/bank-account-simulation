@@ -1,9 +1,9 @@
 .main__container {
-    height: 100%;
-    width: 100%;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 .main__grid {
@@ -12,11 +12,11 @@
 
 .desktop__content {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
     flex-direction: column;
-    margin-bottom: $xl-size;
     height: auto;
+    justify-content: space-between;
+    margin-bottom: $xl-size;
+    width: 100%;
     @media (min-width: $tablet-landscape) {
         flex-direction: row;
     }
@@ -30,11 +30,11 @@
 }
 
 .desktop-loading__bg {
-    display: flex;
-    justify-content: center;
     align-items: center;
     background: white;
+    display: flex;
     height: 100vh;
-    width: 100%;
+    justify-content: center;
     opacity: 1;
+    width: 100%;
 }

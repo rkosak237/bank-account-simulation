@@ -42,15 +42,15 @@
 
 .account {
     &__profile-img {
-        height: $xxl-size;
-        width: $xxl-size;
         background: themeColor(grey);
         color: themeColor(light-font);
+        height: $xxl-size;
+        width: $xxl-size;
     }
     &__user {
+        align-content: space-around;
         display: flex;
         flex-direction: column;
-        align-content: space-around;
         padding: 0 $s-size;
     }
     &__settings {
@@ -66,14 +66,14 @@
 
 .btn__mobile {
     align-self: center;
-    cursor: pointer;
-    width: 40px;
-    height: 35px;
+    background: transparent;
     border: 0;
     border-top: 5px solid black;
-    background: transparent;
+    cursor: pointer;
+    height: 35px;
     position: relative;
     transition: 0.3s transform linear;
+    width: 40px;
 
     @media (min-width: $tablet-landscape) {
         display: none;
@@ -82,13 +82,13 @@
 
 .btn__mobile::before,
 .btn__mobile::after {
+    border-top: 5px solid black;
     content: '';
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    border-top: 5px solid black;
     transform: translateY(10px);
+    width: 100%;
 }
 
 .btn__mobile::after {
@@ -97,8 +97,8 @@
 }
 
 .btn__mobile:focus {
-    transform: rotate(45deg) translateY(5px);
     border: none;
+    transform: rotate(45deg) translateY(5px);
 }
 
 .btn__mobile:focus::after {

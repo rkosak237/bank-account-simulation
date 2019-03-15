@@ -1,27 +1,27 @@
 .lp-product {
     color: #fff;
     height: 100vh;
-    width: 100%;
-    position: relative;
     overflow: hidden;
     position: relative;
+    position: relative;
+    width: 100%;
     &::after {
+        background: white;
+        bottom: -56rem;
         content: '';
         height: 85%;
-        width: 142%;
         position: absolute;
         right: -54rem;
-        bottom: -56rem;
-        background: white;
         transform: rotate(-33deg);
+        width: 142%;
     }
     &__grid {
-        display: flex;
         align-items: center;
+        display: flex;
     }
     &__title {
-        font-size: $xl-size;
         color: #222;
+        font-size: $xl-size;
         margin: $m-size 0;
         @media (min-width: $tablet) {
             font-size: $xxl-size;
@@ -37,22 +37,22 @@
         }
     }
     &__text {
-        width: 90%;
         @extend .theme__text;
+        width: 90%;
         @media (min-width: $tablet) {
             width: 55rem;
         }
     }
     &--gradient-bg {
+        animation: bg-animation__gradient 15s infinite;
         background-image: linear-gradient(125deg, #34495e, #27ae60, #16a085, #f1c40f);
         background-size: 400%;
-        animation: bg-animation__gradient 15s infinite;
     }
     &__buttons-container {
         display: flex;
-        justify-content: space-between;
         flex-direction: column;
         height: 10rem;
+        justify-content: space-between;
         width: 100%;
         @media (min-width: $tablet) {
             flex-direction: row;

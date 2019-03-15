@@ -1,9 +1,9 @@
 .chart {
+    border-radius: 10px;
     height: $xxl-size*4;
-    width: 100%;
     height: 100%;
     margin: $l-size 0;
-    border-radius: 10px;
+    width: 100%;
 
     canvas {
         width: 100%;

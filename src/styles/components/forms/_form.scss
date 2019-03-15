@@ -1,18 +1,18 @@
 .signUp {
-    height: 100%;
-    width: 100%;
     display: flex;
+    height: 100%;
     justify-content: center;
+    width: 100%;
     &__container {
-        box-sizing: border-box;
-        border-radius: 5px;
-        padding: 2rem;
-        height: 45rem;
-        width: 100%;
         animation: slide-from-fade 1s ease-in-out 0s 1;
+        border-radius: 5px;
+        box-sizing: border-box;
+        height: 45rem;
+        padding: 2rem;
+        width: 100%;
         @media (min-width: $phone-big) {
-            width: 55rem;
             padding: 5rem;
+            width: 55rem;
         }
         @media (min-width: $tablet) {
             box-shadow: 0 37.125px 70px -12.125px rgba(0, 0, 0, 0.3);

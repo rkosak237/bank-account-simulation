@@ -105,7 +105,7 @@ constructor(props) {
     const { mail, password } = this.state.user;
 
 
-    // if(auth.uid) return <Redirect to="/desktop" />
+    if(auth.uid) return <Redirect to="/desktop" />
      return (
        <div className="main__container signUp">
         <section className="signUp__container fade-in">

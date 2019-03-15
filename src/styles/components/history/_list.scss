@@ -1,7 +1,7 @@
 .history__list {
+    @extend .history-grid;
     flex-direction: column;
     margin-bottom: $xl-size;
-    @extend .history-grid;
     width: 90%;
 
     @media (min-width: $tablet-landscape) {
@@ -19,8 +19,8 @@
     }
 
     &__container {
-        border: 1px solid themeColor(border-color);
         border-radius: 10px;
+        border: 1px solid themeColor(border-color);
         height: 60vh;
         overflow-y: scroll;
     }
