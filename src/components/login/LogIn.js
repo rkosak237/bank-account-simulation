@@ -2,7 +2,7 @@ import * as React from 'react';
 import Input from './Input';
 import { Link } from "react-router-dom";
 
-export default ({ email, handleChange, handleSubmit, password }) => (
+export default ({ email, handleChange, handleSubmit, password, showErrors }) => (
   <form className="LogIn__form" onSubmit={handleSubmit}>
     <Input
       label={"E-mail"}
@@ -13,6 +13,9 @@ export default ({ email, handleChange, handleSubmit, password }) => (
       onChange={handleChange}
       value={email}
       autocomplete={"email"}
+      errorEmptyInput={'Type your e-mail'}
+      invalidInput={'E-mail doesnt exist'}
+      showError={showErrors}
     />
     <Input
       label={"Password"}
@@ -23,6 +26,9 @@ export default ({ email, handleChange, handleSubmit, password }) => (
       onChange={handleChange}
       value={password}
       autocomplete={"current-password"}
+      errorEmptyInput={'Type your password'}
+      invalidInput={'Password is incorrect'}
+      showError={showErrors}
     />
     <div className="buttons-container">
       <button type="submit" className="btn">

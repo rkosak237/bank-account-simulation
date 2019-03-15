@@ -1,7 +1,7 @@
 import { LOGIN_SUCCESS, LOGIN_ERROR, LOGOUT_SUCCESS } from "../actions/types";
 
 const initialState = {
-  authError: null,
+  authError: false,
 }
 
 export default (state = initialState, action) => {
@@ -9,12 +9,13 @@ export default (state = initialState, action) => {
     case LOGIN_SUCCESS:
       return {
         ...state,
-        authError: null
+        authError: false
       };
     case LOGIN_ERROR:
+    console.log('Login failed')
       return {
         ...state,
-        authError: "Login failed"
+        authError: true
       };
     case LOGOUT_SUCCESS:
       return state;

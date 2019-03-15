@@ -12,7 +12,6 @@ In next weeks project will register yourself as a new user. Until then you need 
 * P: admin123
 
 ## Incoming functionalities:
-* Nav mobile
 * Calendar - showing costs
 * Register form - Also your data will be displayed in details about user placed in header
 * Login and register validation
@@ -26,6 +25,7 @@ In next weeks project will register yourself as a new user. Until then you need 
 
 
 ## Working functionalities:
+* Nav mobile
 * Loading spinner between login and desktop view. It will be visible until fetch from database will be completed.
 * Login in/out with firebase
 * Fetching banking dummy data

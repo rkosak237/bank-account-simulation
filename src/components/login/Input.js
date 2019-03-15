@@ -2,15 +2,18 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 
 const Input = ({
-        classes,
-        name,
-        placeholder,
-        type,
-        onChange,
-        fullName,
-        minLength = 2,
-        label,
-        autocomplete
+    classes,
+    name,
+    placeholder,
+    type,
+    onChange,
+    fullName,
+    minLength = 2,
+    label,
+    autocomplete,
+    errorEmptyInput,
+    invalidInput,
+    showError
     }) => (
     <div className="LogIn__wrapper">
         <label className="LogIn__label">{label}</label>
@@ -24,7 +27,7 @@ const Input = ({
             minLength={minLength}
             autoComplete={autocomplete}
             required/>
-            <span className="LogIn__error">blabla</span>
+            <span className={!showError ? "LogIn__error" : "LogIn__error LogIn__error--visible "}>{!showError ? errorEmptyInput : invalidInput}</span>
     </div>
 );
 

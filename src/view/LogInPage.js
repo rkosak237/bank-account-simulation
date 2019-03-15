@@ -15,34 +15,33 @@ constructor(props) {
        password: ''
      },
      validationError: {
-       invalidUser: false,
-       invalidEmail: false
+       invalidEmail: false,
+       invalidPass: false
      },
    }
 }
 
- handleSubmit = (e) => {
-   const { authError, authorization } = this.props;
-    e.preventDefault();
+  handleSubmit = (e) => {
+    const { authError } = this.props;
+      e.preventDefault();
 
-    const clearInvalidState = {
-      email: '',
-      password: ''
+      const clearInvalidState = {
+        email: '',
+        password: ''
+      }
+
+      //This passes user state catched in handleChange to redux-thunk, and then to firebase
+
+      this.props.logIn(this.state.user);
+
+
+    if (!authError) {
+      this.setState({
+        userValidation: clearInvalidState
+      });
     }
 
-   this.props.logIn(this.state.user);
-   if (authError) {
-     this.setState({
-       showErrors: false,
-     });
-   } else {
-     this.setState({
-       showErrors: true,
-       userValidation: clearInvalidState
-     });
-   }
-
-    }
+  }
 
 
 //move validation to separate file
@@ -85,7 +84,7 @@ constructor(props) {
         const { user } = this.state;
 
         const target = e.target,
-            value = target.type === 'checkbox' ? target.checked : target.value,
+            value = target.value,
             name = target.name;
 
             this.setState({
@@ -102,23 +101,24 @@ constructor(props) {
     const {
       showErrors
     } = this.state;
-    const { auth } = this.props;
-    if(auth.uid) return <Redirect to="/desktop" />
+    const { auth, authError } = this.props;
+    const { mail, password } = this.state.user;
 
+
+    // if(auth.uid) return <Redirect to="/desktop" />
      return (
        <div className="main__container signUp">
         <section className="signUp__container fade-in">
           <LogIn
-            email={this.state.user.mail}
-            password={this.state.user.password}
+            email={mail}
+            password={password}
             handleSubmit={this.handleSubmit}
             handleChange={this.handleChange}
-            // userNameInBase={userNameInBase}
-            // validationError={validationError}
-            showErrors={showErrors}
+            showErrors={authError}
             form={"signUp"}
           />
         </section>
+         {this.props.authError ? 'trutrue' : 'false'}
       </div>
     )
   }
@@ -135,5 +135,3 @@ export default connect(
   mapStateToProps,
   { logIn }
 )(LogInPage);
-
-// ) (withRouter(LogInPage));
