@@ -13,5 +13,4 @@ const rootReducer = combineReducers({
     mobile: mobileReducer
 });
 
-
 export default rootReducer;

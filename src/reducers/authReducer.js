@@ -1,4 +1,4 @@
-import { LOGIN_SUCCESS, LOGIN_ERROR, LOGOUT_SUCCESS } from "../actions/types";
+import { LOGIN_SUCCESS, LOGIN_ERROR, LOGOUT_SUCCESS, LOGOUT_ERROR } from "../actions/types";
 
 const initialState = {
   authError: false,
@@ -18,6 +18,8 @@ export default (state = initialState, action) => {
         authError: true
       };
     case LOGOUT_SUCCESS:
+      return state;
+    case LOGOUT_ERROR:
       return state;
     default:
       return state;

@@ -22,12 +22,13 @@
     &__error {
         animation: slide-from-fade .5s ease-in-out 0s 1;
         color: red;
-        display: none;
-        padding: 1rem;
+        visibility: hidden;
         transition: .2s ease-in-out;
+        display: block;
     }
     &__error--visible {
         animation: slide-from-fade .5s ease-in-out 0s 1;
-        display: block;
+        visibility: visible;
+        padding: 2rem 1rem;
     }
 }

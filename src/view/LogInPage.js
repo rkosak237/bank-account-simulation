@@ -98,12 +98,8 @@ constructor(props) {
     }
 
   render() {
-    const {
-      showErrors
-    } = this.state;
     const { auth, authError } = this.props;
     const { mail, password } = this.state.user;
-
 
     if(auth.uid) return <Redirect to="/desktop" />
      return (
@@ -118,7 +114,6 @@ constructor(props) {
             form={"signUp"}
           />
         </section>
-         {this.props.authError ? 'trutrue' : 'false'}
       </div>
     )
   }

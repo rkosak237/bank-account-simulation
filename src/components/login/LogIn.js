@@ -2,8 +2,22 @@ import * as React from 'react';
 import Input from './Input';
 import { Link } from "react-router-dom";
 
-export default ({ email, handleChange, handleSubmit, password, showErrors }) => (
+export default ({
+  email,
+  handleChange,
+  handleSubmit,
+  password,
+  showErrors
+}) => (
   <form className="LogIn__form" onSubmit={handleSubmit}>
+    <span
+      className={
+        !showErrors ? "LogIn__error" :
+        "LogIn__error LogIn__error--visible"}>
+
+      {showErrors && `Data isn't correct. Check email and password, and try again`}
+    </span>
+
     <Input
       label={"E-mail"}
       classes={"LogIn__input"}
@@ -13,8 +27,6 @@ export default ({ email, handleChange, handleSubmit, password, showErrors }) => 
       onChange={handleChange}
       value={email}
       autocomplete={"email"}
-      errorEmptyInput={'Type your e-mail'}
-      invalidInput={'E-mail doesnt exist'}
       showError={showErrors}
     />
     <Input
@@ -26,8 +38,6 @@ export default ({ email, handleChange, handleSubmit, password, showErrors }) => 
       onChange={handleChange}
       value={password}
       autocomplete={"current-password"}
-      errorEmptyInput={'Type your password'}
-      invalidInput={'Password is incorrect'}
       showError={showErrors}
     />
     <div className="buttons-container">
