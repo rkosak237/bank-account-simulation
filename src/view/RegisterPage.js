@@ -12,8 +12,8 @@ constructor(props) {
   render() {
 
      return (
-      <div className="main__container fade-in signUp">
-        <section className="signUp__container">
+      <div className="main__container signUp">
+        <section className="signUp__container fade-in">
          <h1>Register Page</h1>
         </section>
       </div>
