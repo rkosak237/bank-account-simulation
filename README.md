@@ -11,12 +11,32 @@ In next weeks project will register yourself as a new user. Until then you need 
 * L: admin123@admin.com
 * P: admin123
 
-## Incoming functionalities:
-* Calendar - showing costs
+## Incoming functionalities divided on pages:
+
+### Calendar
+* Months, weeks and days mock-up
+* Months could be switched
+* Introduced data picker
+* Calendar shows costs in shape of dot.
+
+### Register
 * Register form - Also your data will be displayed in details about user placed in header
-* Register validation
-* Modal after sending - transfer
-* Adding your own cost to the app
+* Register page - validaton and displaying errors
+
+
+### Transfer
+* Modal with feedback after sending - transfer
+* Form will be divided on at least 4 components for better user experience. Steps should appear one after another.
+    1. Destination of transfer (person, tax, health care, charity, Facebook etc.) and list below with the most frequent recipients
+    2. Name of the recipent, account number
+    3. Title of the transfer, amount of money, data of sending money, type of transfer (Standard, Elixir, etc.)
+    4. Summary -> approve  or decline
+
+* After sending transfer, cost is added to history
+
+### History
+* Optymization of the search-bar - added debounce function
+
 
 ## Incoming pages:
 * 404
@@ -34,6 +54,7 @@ In next weeks project will register yourself as a new user. Until then you need 
 * History component: searching, filtering list
 * Routing
 * Redux store - reducers and actions are tested with Jest
+* Login Page - validation
 
 ## Features
 * [React (v16.3)](https://reactjs.org) - a JavaScript library for building user interfaces
