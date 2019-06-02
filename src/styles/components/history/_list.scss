@@ -1,7 +1,7 @@
 .history__list {
     @extend .history-grid;
     flex-direction: column;
-    margin-bottom: $xl-size;
+    margin: $m-size 0 $xl-size 0;
     width: 90%;
 
     @media (min-width: $tablet-landscape) {

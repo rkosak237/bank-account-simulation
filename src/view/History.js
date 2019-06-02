@@ -42,7 +42,7 @@ class History extends React.Component {
         <div>
             <div className="main__container fade-in page">
 
-              <div className="history-grid main__grid history">
+              <header className="history-grid main__grid history">
                 <h1 className="c__title">History</h1>
 
                 <div className="inputs__container">
@@ -56,7 +56,7 @@ class History extends React.Component {
                     changeStatus={this.handleChangeSelectStatus}
                     valueStatus={filters.status} />
                 </div>
-              </div>
+              </header>
               <List />
             </div>
           </div>
