@@ -8,7 +8,6 @@ export default ({handleSearch, value}) => (
         onChange={(e) => {
             e.persist();
             handleSearch(e.target.value)}}
-        // value={value}
         type="text"/>
     </div>
 );

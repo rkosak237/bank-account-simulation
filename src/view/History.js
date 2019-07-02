@@ -21,7 +21,11 @@ class History extends React.Component {
     }
     
     componentWillUnmount = () => {
+<<<<<<< HEAD
         this.setState({
+=======
+        tthis.setState({
+>>>>>>> b3343252174681929618e61de20cba6d18ba9497
             descriptionSearchTerm: ''
         })
     } 
