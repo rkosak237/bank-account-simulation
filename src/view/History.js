@@ -7,13 +7,24 @@ import SelectContainer from '../components/history-components/SelectContainer';
 //redux
 import { connect } from 'react-redux';
 import { filterCategory, filterDescription, filterStatus } from '../actions/filters';
-
+import { debounce } from 'lodash';
 //router
 import { Redirect } from "react-router-dom";
 import List from '../components/history-components/List';
 
 class History extends React.Component {
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            descriptionSearchTerm: '',
+        }
+    }
+    
+    componentWillUnmount = () => {
+        tthis.setState({
+            descriptionSearchTerm: ''
+        })
+    } 
     handleChangeSelect = (e) => {
         const { dispatch } = this.props;
         dispatch(filterCategory(e.target.value));
@@ -26,11 +37,14 @@ class History extends React.Component {
         e.preventDefault();
     }
 
-    handleChangeSearch = (e) => {
+    handleChangeSearch = debounce((text) => {
         const { dispatch } = this.props;
-        dispatch(filterDescription(e.target.value));
-        e.preventDefault();
-    }
+        const { descriptionSearchTerm } = this.state;
+        this.setState({
+            descriptionSearchTerm: text
+        })
+        dispatch(filterDescription(descriptionSearchTerm));
+    }, 250);
 
 
     render() {
@@ -47,8 +61,8 @@ class History extends React.Component {
 
                 <div className="inputs__container">
                     <Search
-                    onChange={this.handleChangeSearch}
-                    value={filters.description} />
+                    handleSearch={this.handleChangeSearch}
+                    value={this.state.descriptionSearchTerm} />
 
                     <SelectContainer
                     changeSelect={this.handleChangeSelect}
