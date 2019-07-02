@@ -5,12 +5,12 @@
 @import './base/functions';
 @import './base/media-queries';
 //global
-@import './components/global/buttons';
-@import './components/global/header';
-@import './components/global/containers';
-@import './components/global/nav';
-@import './components/global/footer';
-@import './components/global/listElement';
+@import './global/buttons';
+@import './global/header';
+@import './global/containers';
+@import './global/nav';
+@import './global/footer';
+@import './global/listElement';
 //landing-page
 @import './components/landing-page/product';
 @import './components/landing-page/overview';

@@ -1,12 +1,13 @@
 import * as React from 'react';
 
-export default ({onChange, value}) => (
+export default ({handleSearch, value}) => (
     <div className="inputs__element search ">
         <label className="history__label" htmlFor="">Search</label>
         <input
         className="search__input"
-        onChange={onChange}
-        value={value}
+        onChange={(e) => {
+            e.persist();
+            handleSearch(e.target.value)}}
         type="text"/>
     </div>
 );
